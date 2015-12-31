@@ -9,7 +9,7 @@ function puzzle_customize_register($wp_customize) {
     /* Logo */
     $wp_customize->add_setting('logo', array(
         'default'           => '',
-        'sanitize_callback' => 'esc_url_raw',
+        'sanitize_callback' => 'esc_attr',
         'transport'         => 'refresh'
     ));
     
@@ -53,7 +53,7 @@ function puzzle_customize_register($wp_customize) {
     
     $wp_customize->add_setting('nav_background_color', array(
         'default'           => 'primary',
-        'sanitize_callback' => 'esc_url_raw',
+        'sanitize_callback' => 'esc_attr',
         'transport'         => 'refresh'
     ));
     
@@ -73,7 +73,7 @@ function puzzle_customize_register($wp_customize) {
     
     $wp_customize->add_setting('footer_background_color', array(
         'default'           => 'primary',
-        'sanitize_callback' => 'esc_url_raw',
+        'sanitize_callback' => 'esc_attr',
         'transport'         => 'refresh'
     ));
     
@@ -87,7 +87,7 @@ function puzzle_customize_register($wp_customize) {
     
     $wp_customize->add_setting('footer_content', array(
         'default'           => '',
-        'sanitize_callback' => 'esc_url_raw',
+        'sanitize_callback' => 'esc_html',
         'transport'         => 'refresh'
     ));
     
@@ -106,7 +106,7 @@ function puzzle_customize_register($wp_customize) {
     
     $wp_customize->add_setting('disable_smooth_scroll', array(
         'default'           => '',
-        'sanitize_callback' => 'esc_url_raw',
+        'sanitize_callback' => 'esc_attr',
         'transport'         => 'refresh'
     ));
     
@@ -127,7 +127,7 @@ function puzzle_save_custom_style() {
     
     WP_Filesystem();
     global $wp_filesystem;
-    if (!$wp_filesystem->put_contents(get_stylesheet_directory() . '/css/custom.css', $css)) {
+    if (!$wp_filesystem->put_contents(get_stylesheet_directory() . '/assets/css/custom.css', $css)) {
         return true;
     }
 }

@@ -4,15 +4,13 @@
  * Puzzle
  * Custom style colors using admin options
  *
- * The CSS here is converted into /css/custom.css by functions.php if the sheet
- * does not exist yet, and then is updated every time the user updates the
- * theme customizations (see /theme/customize_theme.php).
+ * The CSS here is converted into /assets/css/custom.css by functions.php if
+ * the sheet does not exist yet, and then is updated every time the user
+ * updates the theme customizations (see /theme/customize_theme.php).
  */
 
 $puzzle_pieces = new PuzzlePieces;
 $puzzle_default_colors = $puzzle_pieces->colors();
-
-var_dump($puzzle_pieces->colors());
 
 $primary_color = get_theme_mod('primary_color', $puzzle_default_colors['primary_color']->default_color());
 $secondary_color = get_theme_mod('secondary_color', $puzzle_default_colors['secondary_color']->default_color());
