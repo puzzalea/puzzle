@@ -8,6 +8,7 @@ $miscellaneous_widths: (1point5: 1.5, 2point4: 2.4);
 @mixin make_columns($size) {
     @for $i from 1 through $columns_num {
         .column.#{$size}-span#{$i} {
+            @include flex-basis(100% / $columns_num * $i);
             width: 100% / $columns_num * $i;
         }
     }
@@ -24,6 +25,7 @@ $miscellaneous_widths: (1point5: 1.5, 2point4: 2.4);
 
     @each $name, $value in $miscellaneous_widths {
         .column.#{$size}-span#{$name} {
+            @include flex-basis(100% / $columns_num * $value);
             width: 100% / $columns_num * $value;
         }
     
@@ -40,22 +42,28 @@ $miscellaneous_widths: (1point5: 1.5, 2point4: 2.4);
 .row {
     @extend %clearfix;
     @extend %page-max-width;
+    @include display-flex;
+    @include flex-wrap(wrap);
 }
 
 .column {
     float: left;
-    min-height: 1px;
-    padding: 0 15px;
+    @include flex(0 1 100%);
+    min-width: 0;
     
     &.center {
-        float: none;
-        margin: 0 auto;
+        @include align-self(center);
     }
 }
 
 .column-inner {
     position: relative;
     padding: 15px;
+    
+    @include breakpoint($size-md) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 @include make_columns(xs);

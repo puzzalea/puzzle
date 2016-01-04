@@ -15,10 +15,6 @@
     
     @include breakpoint($size-md) {
         text-align: left;
-    
-        .puzzle-button {
-            padding-left: 20px;
-        }
     }
     
     @include breakpoint ($size-lg) {

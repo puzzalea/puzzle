@@ -23,6 +23,17 @@
     
     .icon-column {
         .column-inner {
+            @include display-flex;
+            @include flex-direction(column);
+            
+            > * {
+                @include flex(0 1 auto);
+            }
+            
+            .puzzle-feature-column-content {
+                @include flex-grow(1);
+            }
+            
             ul {
                 margin-left: 0;
                 padding: 0 1rem;
@@ -42,20 +53,10 @@
                 text-align: left;
             }
         }
-        
-        &.has-button {
-            .column-inner {
-                padding-bottom: 90px;
-            }
-
-            .puzzle-button {
-                position: absolute;
-                left: 15%;
-                bottom: 30px;
-                width: 70%;
-                margin: 0;
-                font-size: 1.6rem;
-            }
+    
+        .puzzle-feature-main-button {
+            @include align-self(center);
+            width: 80%;
         }
     }
     
@@ -64,18 +65,20 @@
     }
 }
 
+.puzzle-features-content {
+    @include justify-content(center);
+}
+
 @include breakpoint($size-sm) {
-    .puzzle-features {
-        .puzzle-features-content {
-            .icon-row {
-                .puzzle-main-icon, .puzzle-icon-link, .puzzle-feature-column-content {
-                    float: left;
-                }
-        
-                .puzzle-feature-column-content {
-                    width: 60%;
-                    width: calc(100% - 90px);
-                }
+    .puzzle-features-content {
+        .icon-row {
+            .puzzle-main-icon, .puzzle-icon-link, .puzzle-feature-column-content {
+                float: left;
+            }
+    
+            .puzzle-feature-column-content {
+                width: 60%;
+                width: calc(100% - 90px);
             }
         }
     }

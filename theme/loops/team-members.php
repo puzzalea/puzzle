@@ -1,5 +1,5 @@
 <?php if ($puzzle_options['layout'] == 'columns') : ?>
-<div class="column <?php echo span_classes($c, $puzzle_columns_num); ?> puzzle-team-member-column">
+<div class="column <?php echo span_classes($c, $puzzle_columns_num, false); ?> puzzle-team-member-column">
 <?php else : ?>
 <div class="column xs-span12 puzzle-team-member-row">
 <div class="row">

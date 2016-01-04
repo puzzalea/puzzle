@@ -8,6 +8,6 @@
 </div>
 <div class="column xs-span12 md-span6 lg-span3">
     <div class="column-inner">
-        <p><a class="puzzle-button" href="<?php echo $puzzle_column['link']; ?>"<?php echo (!empty($puzzle_column['open_link_in_new_tab']) ? ' target="_blank"' : ''); ?>><?php echo $puzzle_column['button_text']; ?></a></p>
+        <a class="puzzle-button" href="<?php echo $puzzle_column['link']; ?>"<?php echo (!empty($puzzle_column['open_link_in_new_tab']) ? ' target="_blank"' : ''); ?>><?php echo $puzzle_column['button_text']; ?></a>
     </div>
 </div>

@@ -11,12 +11,9 @@
     background-color: rgba($medium-gray, 0.9);
     
     .row {
+        @include align-items(center);
         height: 70px;
-        padding: 5px;
-        
-        .column {
-            @include vertical-center-fix;
-        }
+        padding: 5px 15px;
     }
     
     ul {
@@ -27,6 +24,10 @@
         display: block;
         width: auto;
         max-height: 50px;
+        
+        @include breakpoint($size-md) {
+            margin-left: 15px;
+        }
     }
     
     a {

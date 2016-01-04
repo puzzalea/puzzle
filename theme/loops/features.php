@@ -3,7 +3,7 @@ $link_target = (!empty($puzzle_column['open_link_in_new_tab']) ? ' target="_blan
 
 $span_classes = '';
 if ($puzzle_options['layout'] == 'columns') {
-    $span_classes = span_classes($c, $puzzle_columns_num) . ' icon-column';
+    $span_classes = span_classes($c, $puzzle_columns_num, false) . ' icon-column';
 } else {
     $span_classes = 'xs-span12 icon-row';
 }
@@ -27,10 +27,9 @@ if (!empty($puzzle_column['link']) && !empty($puzzle_column['icon_link'])) {
             ?>
             
             <?php echo apply_filters('the_content', $puzzle_column['content']); ?>
-            
-            <?php if (!empty($puzzle_column['button_text'])) : ?>
-            <p><a class="puzzle-button" href="<?php echo $puzzle_column['link']; ?>"<?php echo $link_target; ?>><?php echo $puzzle_column['button_text']; ?></a></p>
-            <?php endif; ?>
         </div>
+        <?php if (!empty($puzzle_column['button_text'])) : ?>
+        <a class="puzzle-button puzzle-feature-main-button" href="<?php echo $puzzle_column['link']; ?>"<?php echo $link_target; ?>><?php echo $puzzle_column['button_text']; ?></a>
+        <?php endif; ?>
     </div>
 </div>

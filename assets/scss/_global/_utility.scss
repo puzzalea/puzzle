@@ -6,7 +6,7 @@
     @include transition (all 0.4s ease);
     @extend %default-border-radius;
     display: inline-block;
-    padding: 0.6rem 1.5rem;
+    padding: 1rem 1.5rem;
     background-color: $medium-gray;
     border: solid 1px $medium-gray;
     color: #fff;

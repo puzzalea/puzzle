@@ -44,9 +44,6 @@
  */
 
 .puzzle-features-content, .puzzle-team-members-content {
-    @include display-flex;
-    @include flex-wrap(wrap);
-    
     > .column {
         @include display-flex;
     }
