@@ -17,7 +17,7 @@ if ($disable_smooth_scroll) {
     <?php wp_head(); ?>
 </head>
 <body <?php body_class($smooth_scroll_class); ?>>
-    <?php if (has_nav_menu('primary')) : ?>
+    <?php if ($logo_id || has_nav_menu('primary')) : ?>
     <nav id="nav">
         <div class="row">
             <?php if ($logo_id) : ?>
@@ -27,6 +27,8 @@ if ($disable_smooth_scroll) {
                 </a>
             </div>
             <?php endif; ?>
+            
+            <?php if (has_nav_menu('primary')) : ?>
             <div class="column <?php echo ($logo_id ? 'xs-span4 sm-span6 md-span8 lg-span9' : 'xs-span12'); ?>">
                 <?php
                 $args = array(
@@ -61,6 +63,7 @@ if ($disable_smooth_scroll) {
                 wp_nav_menu($args);
                 ?>
             </div>
+            <?php endif; ?>
         </div>
     </nav>
     <?php endif; ?>
