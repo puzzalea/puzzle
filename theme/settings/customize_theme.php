@@ -125,8 +125,13 @@ function puzzle_save_custom_style() {
     require(get_stylesheet_directory() . '/theme/settings/custom_style.php');
     $css = ob_get_clean();
     
-    WP_Filesystem();
     global $wp_filesystem;
+    
+    if (empty($wp_filesystem)) {
+        require_once(ABSPATH .'/wp-admin/includes/file.php');
+        WP_Filesystem();
+    }
+    
     if (!$wp_filesystem->put_contents(get_stylesheet_directory() . '/assets/css/custom.css', $css)) {
         return true;
     }

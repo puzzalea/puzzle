@@ -1,11 +1,10 @@
 <?php
 $link_target = (!empty($puzzle_column['open_link_in_new_tab']) ? ' target="_blank"' : '');
 
-$span_classes = '';
-if ($puzzle_options['layout'] == 'columns') {
-    $span_classes = span_classes($c, $puzzle_columns_num, false) . ' icon-column';
-} else {
+if ($puzzle_options_data['layout'] == 'rows') {
     $span_classes = 'xs-span12 icon-row';
+} else {
+    $span_classes .= ' icon-column';
 }
 
 $icon_link_start = '';
@@ -21,7 +20,7 @@ if (!empty($puzzle_column['link']) && !empty($puzzle_column['icon_link'])) {
         <div class="puzzle-feature-column-content">
             <?php
             if (!empty($puzzle_column['headline'])) {
-                $headline_tag = ($puzzle_options['layout'] == 'columns' ? 'h4' : 'h3');
+                $headline_tag = ($puzzle_options_data['layout'] == 'columns' ? 'h4' : 'h3');
                 echo '<' . $headline_tag . '>' . $puzzle_column['headline'] . '</' . $headline_tag . '>';
             }
             ?>

@@ -40,14 +40,12 @@ $miscellaneous_widths: (1point5: 1.5, 2point4: 2.4);
 }
 
 .row {
-    @extend %clearfix;
     @extend %page-max-width;
     @include display-flex;
     @include flex-wrap(wrap);
 }
 
 .column {
-    float: left;
     @include flex(0 1 100%);
     min-width: 0;
     
@@ -58,11 +56,15 @@ $miscellaneous_widths: (1point5: 1.5, 2point4: 2.4);
 
 .column-inner {
     position: relative;
-    padding: 15px;
+    width: calc(100% - 10px);
+    margin: 0 5px;
+    padding: 10px;
     
     @include breakpoint($size-md) {
-        padding-left: 30px;
-        padding-right: 30px;
+        width: calc(100% - 30px);
+        margin: 0 15px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 

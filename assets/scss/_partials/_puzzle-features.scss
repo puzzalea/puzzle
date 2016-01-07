@@ -25,6 +25,7 @@
         .column-inner {
             @include display-flex;
             @include flex-direction(column);
+            padding-bottom: 30px;
             
             > * {
                 @include flex(0 1 auto);

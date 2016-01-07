@@ -1,5 +1,5 @@
-<?php if ($puzzle_options['layout'] == 'columns') : ?>
-<div class="column <?php echo span_classes($c, $puzzle_columns_num, false); ?> puzzle-team-member-column">
+<?php if ($puzzle_options_data['layout'] == 'columns') : ?>
+<div class="column <?php echo $span_classes; ?> puzzle-team-member-column">
 <?php else : ?>
 <div class="column xs-span12 puzzle-team-member-row">
 <div class="row">
@@ -17,25 +17,25 @@ if (!empty($puzzle_column['image'])) {
 }
 ?>
 
-<?php if ($puzzle_options['layout'] == 'rows') : ?>
+<?php if ($puzzle_options_data['layout'] == 'rows') : ?>
 </div>
 </div>
 <?php endif; ?>
 
-<div class="<?php echo ($puzzle_options['layout'] == 'rows' ? 'column xs-span12 md-span9 ' : ''); ?>puzzle-team-member-content">
+<div class="<?php echo ($puzzle_options_data['layout'] == 'rows' ? 'column xs-span12 md-span9 ' : ''); ?>puzzle-team-member-content">
 
-<?php if ($puzzle_options['layout'] == 'rows') : ?>
+<?php if ($puzzle_options_data['layout'] == 'rows') : ?>
 <div class="column-inner">
 <?php endif; ?>
 
 <?php
 if (!empty($puzzle_column['name'])) {
-    $headline_tag = ($puzzle_options['layout'] == 'columns' ? 'h4' : 'h3');
+    $headline_tag = ($puzzle_options_data['layout'] == 'columns' ? 'h4' : 'h3');
     echo '<' . $headline_tag . '>' . $puzzle_column['name'] . '</' . $headline_tag . '>';
 }
 
 if (!empty($puzzle_column['title'])) {
-    $title_tag = ($puzzle_options['layout'] == 'columns' ? 'h5' : 'h4');
+    $title_tag = ($puzzle_options_data['layout'] == 'columns' ? 'h5' : 'h4');
     echo '<' . $title_tag . '>' . $puzzle_column['title'] . '</' . $title_tag . '>';
 }
 
@@ -74,7 +74,7 @@ if (!empty($social_media)) : ?>
 
 </div>
 
-<?php if ($puzzle_options['layout'] == 'rows') : ?>
+<?php if ($puzzle_options_data['layout'] == 'rows') : ?>
 </div>
 <?php endif; ?>
 

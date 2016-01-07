@@ -5,41 +5,41 @@ if (!empty($page_sections)) :
     $s = 0;
     
     foreach ($page_sections as $page_section) :
-        $puzzle_options = $page_section['options'];
-        $puzzle_columns = $page_section['columns'];
-        $puzzle_columns_num = count($puzzle_columns);
+        $puzzle_options_data = $page_section['options'];
+        $puzzle_columns_data = $page_section['columns'];
+        $puzzle_columns_num = count($puzzle_columns_data);
         $puzzle_section_type = $page_section['type'];
     
-        $main_content = (!empty($puzzle_options['main_content']) ? $puzzle_options['main_content'] : false);
+        $main_content = (!empty($puzzle_options_data['main_content']) ? $puzzle_options_data['main_content'] : false);
     
-        $background_color = (!empty($puzzle_options['background_color']) ? ' ' . $puzzle_options['background_color'] : '');
-        $background_image = (!empty($puzzle_options['background_image']) ? ' ' . wp_get_attachment_url($puzzle_options['background_image']) : false);
-        $text_color_scheme = (!empty($puzzle_options['text_color_scheme']) ? ' ' . $puzzle_options['text_color_scheme'] : '');
-        $padding_top = (!empty($puzzle_options['padding_top']) ? ' ' . $puzzle_options['padding_top'] . '-padding-top' : '');
-        $padding_bottom = (!empty($puzzle_options['padding_bottom']) ? ' ' . $puzzle_options['padding_bottom'] . '-padding-bottom' : '');
-        $open_one_accordion_at_a_time = (!empty($puzzle_options['open_one_at_a_time']) ? ' puzzle-accordions-one-open' : '');
+        $background_color = (!empty($puzzle_options_data['background_color']) ? ' ' . $puzzle_options_data['background_color'] : '');
+        $background_image = (!empty($puzzle_options_data['background_image']) ? ' ' . wp_get_attachment_url($puzzle_options_data['background_image']) : false);
+        $text_color_scheme = (!empty($puzzle_options_data['text_color_scheme']) ? ' ' . $puzzle_options_data['text_color_scheme'] : '');
+        $padding_top = (!empty($puzzle_options_data['padding_top']) ? ' ' . $puzzle_options_data['padding_top'] . '-padding-top' : '');
+        $padding_bottom = (!empty($puzzle_options_data['padding_bottom']) ? ' ' . $puzzle_options_data['padding_bottom'] . '-padding-bottom' : '');
+        $open_one_accordion_at_a_time = (!empty($puzzle_options_data['open_one_at_a_time']) ? ' puzzle-accordions-one-open' : '');
     
         $section_classes = $puzzle_section_type . $background_color . $text_color_scheme . $padding_top . $padding_bottom . $open_one_accordion_at_a_time;
         
-        if (!empty($puzzle_options['id'])) {
-            $section_id = $puzzle_options['id'];
-        } elseif (!empty($puzzle_options['headline'])) {
-            $section_id = to_slug($puzzle_options['headline']);
+        if (!empty($puzzle_options_data['id'])) {
+            $section_id = $puzzle_options_data['id'];
+        } elseif (!empty($puzzle_options_data['headline'])) {
+            $section_id = to_slug($puzzle_options_data['headline']);
         } else {
             $section_id = 'section-' . ($s + 1);
         }
         ?>
     
         <section id="<?php echo $section_id; ?>" class="puzzle-<?php echo $section_classes; ?>"<?php echo ($background_image ? ' style="background-image: url(' . $background_image . ');"' : ''); ?>>
-            <?php if (!empty($puzzle_options['overlay'])) : ?>
+            <?php if (!empty($puzzle_options_data['overlay'])) : ?>
             <div class="puzzle-background-overlay <?php echo $background_color; ?>"></div>
             <?php endif; ?>
         
-            <?php if (!empty($puzzle_options['headline'])) : ?>
+            <?php if (!empty($puzzle_options_data['headline'])) : ?>
             <div class="row puzzle-section-headline">
                 <div class="column xs-span12">
                     <div class="column-inner">
-                        <h2><?php echo $puzzle_options['headline']; ?></h2>
+                        <h2><?php echo $puzzle_options_data['headline']; ?></h2>
                     </div>
                 </div>
             </div>
@@ -55,13 +55,17 @@ if (!empty($page_sections)) :
             </div>
             <?php endif; ?>
     
-            <?php if (!empty($puzzle_columns)) : ?>
+            <?php if (!empty($puzzle_columns_data)) :
+                if ($puzzle_section_type == 'features' || $puzzle_section_type == 'team-members') {
+                    $span_classes = span_classes($puzzle_columns_num);
+                }
+                ?>
             <div class="row puzzle-<?php echo $puzzle_section_type; ?>-content">
                 <?php
                 $c = 0;
                 $loop_file = 'theme/loops/' . $puzzle_section_type . '.php';
         
-                foreach($puzzle_columns as $puzzle_column) {
+                foreach($puzzle_columns_data as $puzzle_column) {
                     include(locate_template($loop_file));
                     $c++;
                 }
@@ -71,9 +75,9 @@ if (!empty($page_sections)) :
         </section>
         <?php
         if ($puzzle_section_type == 'header' && $puzzle_columns_num > 1) :
-            $owl_autoplay = (!empty($puzzle_options['speed']) ? $puzzle_options['speed'] : '10000');
-            $owl_navigation = (!empty($puzzle_options['hide_arrows']) ? 'false' : 'true');
-            $owl_pagination = (!empty($puzzle_options['hide_pagination']) ? 'false' : 'true');
+            $owl_autoplay = (!empty($puzzle_options_data['speed']) ? $puzzle_options_data['speed'] : '10000');
+            $owl_navigation = (!empty($puzzle_options_data['hide_arrows']) ? 'false' : 'true');
+            $owl_pagination = (!empty($puzzle_options_data['hide_pagination']) ? 'false' : 'true');
             ?>
             <script id="<?php echo $section_id; ?>-carousel-script">
             jQuery('#<?php echo $section_id; ?> .puzzle-header-content').owlCarousel({
