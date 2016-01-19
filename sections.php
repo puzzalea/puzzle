@@ -6,20 +6,12 @@ if (!empty($page_sections)) :
     
     foreach ($page_sections as $page_section) :
         $puzzle_options_data = $page_section['options'];
-        $puzzle_columns_data = $page_section['columns'];
+        $puzzle_columns_data = (!empty($page_section['columns']) ? $page_section['columns'] : false);
         $puzzle_columns_num = count($puzzle_columns_data);
         $puzzle_section_type = $page_section['type'];
     
         $main_content = (!empty($puzzle_options_data['main_content']) ? $puzzle_options_data['main_content'] : false);
-    
-        $background_color = (!empty($puzzle_options_data['background_color']) ? ' ' . $puzzle_options_data['background_color'] : '');
         $background_image = (!empty($puzzle_options_data['background_image']) ? ' ' . wp_get_attachment_url($puzzle_options_data['background_image']) : false);
-        $text_color_scheme = (!empty($puzzle_options_data['text_color_scheme']) ? ' ' . $puzzle_options_data['text_color_scheme'] : '');
-        $padding_top = (!empty($puzzle_options_data['padding_top']) ? ' ' . $puzzle_options_data['padding_top'] . '-padding-top' : '');
-        $padding_bottom = (!empty($puzzle_options_data['padding_bottom']) ? ' ' . $puzzle_options_data['padding_bottom'] . '-padding-bottom' : '');
-        $open_one_accordion_at_a_time = (!empty($puzzle_options_data['open_one_at_a_time']) ? ' puzzle-accordions-one-open' : '');
-    
-        $section_classes = $puzzle_section_type . $background_color . $text_color_scheme . $padding_top . $padding_bottom . $open_one_accordion_at_a_time;
         
         if (!empty($puzzle_options_data['id'])) {
             $section_id = $puzzle_options_data['id'];
@@ -30,7 +22,7 @@ if (!empty($page_sections)) :
         }
         ?>
     
-        <section id="<?php echo $section_id; ?>" class="puzzle-<?php echo $section_classes; ?>"<?php echo ($background_image ? ' style="background-image: url(' . $background_image . ');"' : ''); ?>>
+        <section id="<?php echo $section_id; ?>" class="<?php echo section_classes($page_section); ?>"<?php echo ($background_image ? ' style="background-image: url(' . $background_image . ');"' : ''); ?>>
             <?php if (!empty($puzzle_options_data['overlay'])) : ?>
             <div class="puzzle-background-overlay <?php echo $background_color; ?>"></div>
             <?php endif; ?>
