@@ -61,16 +61,6 @@ body, p, li, td,
     color: <?php echo $text_light; ?>;
 }
 
-/* Section Backgrounds */
-
-.primary-color-background {
-    background-color: <?php echo $primary_color; ?>;
-}
-
-.secondary-color-background {
-    background-color: <?php echo $secondary_color; ?>;
-}
-
 /* Links */
 
 a {
@@ -79,6 +69,26 @@ a {
 
 a:hover, a:active {
     color: <?php echo $secondary_color; ?>;
+}
+
+/* Forms */
+
+input, select, textarea {
+    border-color: <?php echo $text_dark; ?>;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: <?php echo $primary_color; ?>;
+}
+
+/* Section Backgrounds */
+
+.primary-background {
+    background-color: <?php echo $primary_color; ?>;
+}
+
+.secondary-background {
+    background-color: <?php echo $secondary_color; ?>;
 }
 
 /* Navigation Bar */
@@ -226,11 +236,12 @@ if ($footer_background_color == 'secondary') {
 /* Buttons */
 
 .puzzle-button,
+button,
 input[type='button'],
 input[type='submit'],
 .puzzle-button.puzzle-button-secondary-color:hover,
-.secondary-color-background .puzzle-button.puzzle-button-white:hover,
-.secondary-color-background .puzzle-button.puzzle-button-secondary-color,
+.secondary-background .puzzle-button.puzzle-button-white:hover,
+.secondary-background .puzzle-button.puzzle-button-secondary-color,
 .categories .cat-item a,
 .single-post-page-links a:hover,
 .comment-reply-link,
@@ -249,7 +260,7 @@ a.page-numbers:hover,
 }
 
 .puzzle-button.puzzle-button-white,
-.primary-color-background .puzzle-button.puzzle-button-white {
+.primary-background .puzzle-button.puzzle-button-white {
     color: <?php echo $primary_color; ?>;
 }
 
@@ -261,13 +272,15 @@ a.page-numbers:hover,
 .puzzle-button:hover,
 .puzzle-button.puzzle-button-white:hover,
 .puzzle-button.puzzle-button-transparent:hover,
+button:hover,
 input[type='button']:hover,
 input[type='submit']:hover,
 .puzzle-button.puzzle-button-secondary-color,
-.primary-color-background .puzzle-button,
-.primary-color-background input[type='button'],
-.primary-color-background input[type='submit'],
-.primary-color-background .puzzle-button.puzzle-button-white:hover,
+.primary-background .puzzle-button,
+.primary-background button,
+.primary-background input[type='button'],
+.primary-background input[type='submit'],
+.primary-background .puzzle-button.puzzle-button-white:hover,
 .categories .cat-item a:hover,
 #cancel-comment-reply-link:hover,
 .comment-reply-link:hover {
@@ -276,12 +289,13 @@ input[type='submit']:hover,
     color: #fff;
 }
 
-.primary-color-background .puzzle-button:hover,
-.primary-color-background input[type='button']:hover,
-.primary-color-background input[type='submit']:hover,
-.secondary-color-background .puzzle-button:hover,
-.secondary-color-background input[type='button']:hover ,
-.secondary-color-background input[type='submit']:hover {
+.primary-background .puzzle-button:hover,
+.primary-background button:hover,
+.primary-background input[type='button']:hover,
+.primary-background input[type='submit']:hover,
+.secondary-background .puzzle-button:hover,
+.secondary-background input[type='button']:hover ,
+.secondary-background input[type='submit']:hover {
     background-color: #fff;
     border-color: #fff;
     color: <?php echo $primary_color; ?>;
@@ -304,7 +318,7 @@ input[type='submit']:hover,
     background-color: rgba(<?php echo hex2rgb($primary_color); ?>, 0.5);
 }
 
-.primary-color-background .wpcf7-form div.wpcf7-response-output.wpcf7-mail-sent-ok {
+.primary-background .wpcf7-form div.wpcf7-response-output.wpcf7-mail-sent-ok {
     background-color: <?php echo $secondary_color; ?>;
     background-color: rgba(<?php echo hex2rgb($secondary_color); ?>, 0.5);
 }

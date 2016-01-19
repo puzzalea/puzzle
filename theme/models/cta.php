@@ -42,7 +42,7 @@ $cta->set_group_name('Call to Action')
         ),
         'padding_top'       => array(
             'name'          => 'Top Padding',
-            'width'         => 'xs span12 sm-span3',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -53,7 +53,7 @@ $cta->set_group_name('Call to Action')
         ),
         'padding_bottom'    => array(
             'name'          => 'Bottom Padding',
-            'width'         => 'xs span12 sm-span3',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -67,8 +67,8 @@ $cta->set_group_name('Call to Action')
             'width'         => 'xs-span12 sm-span6',
             'input_type'    => 'select',
             'options'       => array(
-                'Dark'      => 'dark-text-color-scheme',
-                'Light'     => 'light-text-color-scheme'
+                'Dark'      => 'dark',
+                'Light'     => 'light'
             )
         ),
         'background_image'  => array(
@@ -81,10 +81,10 @@ $cta->set_group_name('Call to Action')
             'width'         => 'xs-span12 sm-span6',
             'input_type'    => 'select',
             'options'       => array(
-                'White'             => 'white-background',
-                'Gray'              => 'gray-background',
-                'Primary Color'     => 'primary-color-background',
-                'Secondary Color'   => 'secondary-color-background'
+                'White'             => 'white',
+                'Gray'              => 'gray',
+                'Primary Color'     => 'primary',
+                'Secondary Color'   => 'secondary'
             )
         ),
         'overlay'           => array(

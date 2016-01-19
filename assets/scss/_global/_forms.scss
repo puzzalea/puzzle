@@ -21,7 +21,7 @@ label, input, select, textarea {
     font-size: 1.6rem;
 }
 
-input, select, textarea {
+button, input, select, textarea {
     -webkit-appearance: none;
 }
 
@@ -31,12 +31,8 @@ input, select, textarea {
     padding: 0.5rem 1rem;
     border: solid 1px $medium-gray;
     @extend %default-border-radius;
-    opacity: 0.75;
+    background-color: #fff;
     @include transition(all 0.4s ease);
-    
-    &:focus {
-        opacity: 1;
-    }
 }
 
 input, select {
@@ -48,14 +44,9 @@ button, input[type='button'], input[type='submit'] {
     text-transform: uppercase;
     white-space: normal;
     cursor: pointer;
-    -webkit-appearance: none;
 }
 
 input {
-    &[type='checkbox'], &[type='radio'], &[type='button'], &[type='submit'], &[type='file'] {
-        opacity: 1;
-    }
-    
     &[type='checkbox'], &[type='radio'], &[type='button'], &[type='submit'] {
         width: auto;
         height: auto;

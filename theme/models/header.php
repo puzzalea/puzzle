@@ -15,10 +15,10 @@ $header->set_group_name('Header')
             'name'          => 'Background Color',
             'input_type'    => 'select',
             'options'       => array(
-                'White'             => 'white-background',
-                'Gray'              => 'gray-background',
-                'Primary Color'     => 'primary-color-background',
-                'Secondary Color'   => 'secondary-color-background'
+                'White'             => 'white',
+                'Gray'              => 'gray',
+                'Primary Color'     => 'primary',
+                'Secondary Color'   => 'secondary'
             )
         ),
         'overlay'           => array(
