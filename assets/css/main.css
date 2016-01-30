@@ -1083,7 +1083,8 @@ label, input, select, textarea {
   font-size: 1.6rem; }
 
 button, input, select, textarea {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  -moz-appearance: none; }
 
 input, select, textarea {
   width: 100%;
