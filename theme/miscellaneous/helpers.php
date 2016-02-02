@@ -18,7 +18,7 @@ function section_classes($page_section) {
     $section_classes .= (!empty($puzzle_options_data['text_color_scheme']) ? ' ' . $puzzle_options_data['text_color_scheme'] . '-text-color-scheme' : '');
     $section_classes .= (!empty($puzzle_options_data['padding_top']) ? ' ' . $puzzle_options_data['padding_top'] . '-padding-top' : '');
     $section_classes .= (!empty($puzzle_options_data['padding_bottom']) ? ' ' . $puzzle_options_data['padding_bottom'] . '-padding-bottom' : '');
-    $sections_classes .= (!empty($puzzle_options_data['open_one_at_a_time']) ? ' puzzle-accordions-one-open' : '');
+    $section_classes .= (!empty($puzzle_options_data['open_one_at_a_time']) ? ' puzzle-accordions-one-open' : '');
     
     return $section_classes;
 }

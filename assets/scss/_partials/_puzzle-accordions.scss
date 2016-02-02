@@ -16,9 +16,8 @@
     
     .column-inner {
         @extend %default-border-radius;
-        @include transition(all 0.4s ease);
-        background-color: #fff;
         background-color: rgba(#fff, 0.5);
+        @include transition(all 0.4s ease);
         
         &:hover, &:active, &.active-accordion {
             background-color: #fff;
@@ -59,6 +58,7 @@
     
     .puzzle-accordion-content {
         display: none;
+        padding: 1rem 0;
     }
 }
 

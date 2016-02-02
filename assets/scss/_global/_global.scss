@@ -29,6 +29,14 @@ main {
                 padding-top: 0;
             }
         }
+        
+        &.no-padding-top:first-child {
+            padding-top: 80px;
+        }
+        
+        &.large-padding-top:first-child {
+            padding-top: 150px;
+        }
     }
     
     ul, ol {

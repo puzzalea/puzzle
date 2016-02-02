@@ -41,6 +41,10 @@ main {
     padding-top: 120px; }
     main > section:first-child.puzzle-header {
       padding-top: 0; }
+  main > section.no-padding-top:first-child {
+    padding-top: 80px; }
+  main > section.large-padding-top:first-child {
+    padding-top: 150px; }
   main ul, main ol {
     margin-left: 3rem; }
 
@@ -126,13 +130,13 @@ section {
   position: relative;
   width: calc(100% - 10px);
   margin: 0 5px;
-  padding: 10px; }
+  padding: 1rem; }
   @media all and (min-width: 660px) {
     .column-inner {
       width: calc(100% - 30px);
       margin: 0 15px;
-      padding-left: 15px;
-      padding-right: 15px; } }
+      padding-left: 1.5rem;
+      padding-right: 1.5rem; } }
 
 .column.xs-span1 {
   -webkit-flex-basis: 8.33333%;
@@ -981,6 +985,11 @@ section {
 h1, h2, h3, h4, h5, h6, p, li, th, td {
   font-family: "Open Sans", sans-serif; }
 
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child, ul:first-child, ol:first-child {
+  margin-top: 0; }
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, p:last-child, ul:last-child, ol:last-child {
+  margin-bottom: 0; }
+
 h1, h2, h3, h4, h5, h6, ul, ol {
   margin: 1rem 0; }
 
@@ -1422,12 +1431,6 @@ a img {
 /* Subsections inside each section */
 .puzzle-section-headline {
   text-align: center; }
-  .puzzle-section-headline .column-inner {
-    padding-bottom: 0; }
-    .puzzle-section-headline .column-inner > *:first-child {
-      margin-top: 0; }
-    .puzzle-section-headline .column-inner > *:last-child {
-      margin-bottom: 0; }
 
 .puzzle-background-overlay {
   position: absolute;
@@ -1464,10 +1467,9 @@ a img {
     .puzzle-accordions-content > .column:first-child {
       margin-top: 0; }
   .puzzle-accordions-content .column-inner {
+    background-color: rgba(255, 255, 255, 0.5);
     -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, 0.5); }
+    transition: all 0.4s ease; }
     .puzzle-accordions-content .column-inner:hover, .puzzle-accordions-content .column-inner:active, .puzzle-accordions-content .column-inner.active-accordion {
       background-color: #fff; }
     .puzzle-accordions-content .column-inner.active-accordion .puzzle-accordion-headline .fa:before {
@@ -1489,7 +1491,8 @@ a img {
       .puzzle-accordions-content .puzzle-accordion-headline .fa:before {
         content: '\f055'; }
   .puzzle-accordions-content .puzzle-accordion-content {
-    display: none; }
+    display: none;
+    padding: 1rem 0; }
 
 .white-background .puzzle-accordions-content .column-inner {
   background-color: #eee;

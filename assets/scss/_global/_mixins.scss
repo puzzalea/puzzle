@@ -2,6 +2,12 @@
 // Mixins //
 //--------//
 
+@mixin animation($animation) {
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    animation: $animation;
+}
+
 @mixin box-shadow($shadow...) {
     -webkit-box-shadow: $shadow;
     box-shadow:         $shadow;
@@ -29,6 +35,20 @@
 @mixin filter($filter) {
     -webkit-filter: $filter;
     filter: $filter;
+}
+
+@mixin keyframes($animation_name) {
+    @-webkit-keyframes #{$animation_name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation_name} {
+        @content;
+    }
+
+    @keyframes #{$animation_name} {
+        @content;
+    }
 }
 
 %page-max-width {
