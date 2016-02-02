@@ -4,10 +4,6 @@
 
 form {
     @extend %clearfix;
-    
-    p {
-        @extend %clearfix;
-    }
 }
 
 label {
@@ -28,7 +24,7 @@ button, input, select, textarea {
 
 input, select, textarea {
     width: 100%;
-    margin: 0.2rem 0 1rem 0;
+    margin: 0.2rem 0 $text-space-unit 0;
     padding: 0.5rem 1rem;
     border: solid 1px $medium-gray;
     @extend %default-border-radius;

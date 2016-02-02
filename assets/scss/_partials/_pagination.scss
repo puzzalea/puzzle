@@ -5,7 +5,7 @@
 #pagination {
     @extend %clearfix;
     margin: 0;
-    padding: 30px 0;
+    padding: $space-unit 0;
     border-top: solid 1px $medium-gray;
     list-style: none;
     

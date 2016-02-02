@@ -4,7 +4,7 @@
 
 .puzzle-loop {
     @extend %clearfix;
-    padding: 3rem 0;
+    padding: $space-unit 0;
     border-top: solid 1px $medium-gray;
     
     &:first-child {

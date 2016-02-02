@@ -5,19 +5,15 @@
 .puzzle-team-members {
     .puzzle-team-member-picture {
         display: block;
-        margin: 10px auto;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin: $text-space-unit auto;
     }
     
     .puzzle-team-member-contact-info p {
-        margin: 8px 0;
-        margin: 0.8rem 0;
+        margin: $text-space-unit 0;
         line-height: 1;
         
         i {
             margin-right: 10px;
-            font-size: 25px;
             font-size: 2.5rem;
             vertical-align: middle;
         }

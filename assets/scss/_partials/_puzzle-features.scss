@@ -7,8 +7,7 @@
         display: block;
         width: 60px;
         height: 60px;
-        margin: 0 auto 30px auto;
-        margin-bottom: 3rem;
+        margin: 0 auto $space-unit auto;
     }
     
     .puzzle-main-icon {
@@ -25,7 +24,8 @@
         .column-inner {
             @include display-flex;
             @include flex-direction(column);
-            padding-bottom: 30px;
+            @include align-items(center);
+            padding-bottom: $space-unit;
             
             > * {
                 @include flex(0 1 auto);
@@ -37,11 +37,11 @@
             
             ul {
                 margin-left: 0;
-                padding: 0 1rem;
+                padding: 0 $text-space-unit;
                 list-style: none;
         
                 li {
-                    padding: 1rem 0;
+                    padding: $text-space-unit 0;
                     border-top: solid 1px $medium-gray;
                 
                     &:first-child {
@@ -56,8 +56,8 @@
         }
     
         .puzzle-feature-main-button {
-            @include align-self(center);
             width: 80%;
+            margin-top: $space-unit;
         }
     }
     

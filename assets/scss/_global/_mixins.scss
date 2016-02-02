@@ -68,11 +68,28 @@
     transition: $property;
 }
 
-// Works IE9+
 @mixin vertical-center-fix {
     position: relative;
     top: 50%;
     @include transform(translate(0, -50%)  translateZ(0));
+}
+
+// Unit converters
+
+@function px($value) {
+    @if (unit($value) == 'rem') {
+        @return #{($value / 1rem * 10)}px;
+    } @else {
+        @return #{$value}px;
+    }
+}
+
+@function rem($value) {
+    @if (unit($value) == 'px') {
+        @return #{($value / 10px)}rem;
+    } @else {
+        @return #{$value}rem;
+    }
 }
 
 // Flexbox

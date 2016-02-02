@@ -12,7 +12,7 @@
     
     .row {
         @include align-items(center);
-        height: 70px;
+        height: $nav-height;
         padding: 5px 15px;
     }
     

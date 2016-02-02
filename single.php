@@ -14,13 +14,13 @@
                                 <?php
                                 $categories = get_the_category();
                                 if ($categories) : ?>
-                                    <h6>Categories:
+                                    <h5>Categories:
                                         <ul class="categories">
                                             <?php foreach ($categories as $c) : ?>
                                             <li class="cat-item"><a href="<?php echo get_category_link($c->term_id); ?>" title="View all posts in <?php echo $c->name; ?>"><?php echo $c->name; ?></a></li>
                                             <?php endforeach; ?>
                                         </ul>
-                                    </h6>
+                                    </h5>
                                 <?php endif; ?>
                         
                                 <?php if (has_tag()) : ?>
