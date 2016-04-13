@@ -12,17 +12,9 @@ if (!empty($page_sections)) :
     
         $main_content = (!empty($puzzle_options_data['main_content']) ? $puzzle_options_data['main_content'] : false);
         $background_image = (!empty($puzzle_options_data['background_image']) ? ' ' . wp_get_attachment_url($puzzle_options_data['background_image']) : false);
-        
-        if (!empty($puzzle_options_data['id'])) {
-            $section_id = $puzzle_options_data['id'];
-        } elseif (!empty($puzzle_options_data['headline'])) {
-            $section_id = to_slug($puzzle_options_data['headline']);
-        } else {
-            $section_id = 'section-' . ($s + 1);
-        }
         ?>
     
-        <section id="<?php echo $section_id; ?>" class="<?php echo section_classes($page_section); ?>"<?php echo ($background_image ? ' style="background-image: url(' . $background_image . ');"' : ''); ?>>
+        <section id="<?php echo section_id($s, $page_section); ?>" class="<?php echo section_classes($page_section); ?>"<?php echo ($background_image ? ' style="background-image: url(' . $background_image . ');"' : ''); ?>>
             <?php if (!empty($puzzle_options_data['overlay'])) : ?>
             <div class="puzzle-background-overlay <?php echo $background_color; ?>"></div>
             <?php endif; ?>

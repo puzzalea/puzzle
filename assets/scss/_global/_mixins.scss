@@ -10,7 +10,7 @@
 
 @mixin box-shadow($shadow...) {
     -webkit-box-shadow: $shadow;
-    box-shadow:         $shadow;
+    box-shadow: $shadow;
 }
 
 // usage: @include breakpoint(480px) { your styles here }
@@ -18,18 +18,6 @@
     @media all and (min-width: $point) {
         @content;
     }
-}
-
-%clearfix {
-    &:after {
-        clear: both;
-        display: table;
-        content: " ";
-    }
-}
-
-%default-border-radius {
-    border-radius: 5px;
 }
 
 @mixin filter($filter) {
@@ -49,11 +37,6 @@
     @keyframes #{$animation_name} {
         @content;
     }
-}
-
-%page-max-width {
-    max-width: $max-width;
-    margin: 0 auto;
 }
 
 @mixin transform($property) {

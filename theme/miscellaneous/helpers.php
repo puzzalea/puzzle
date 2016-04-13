@@ -23,4 +23,23 @@ function section_classes($page_section) {
     return $section_classes;
 }
 
+// Determines the ID for a section. Can be edited on a theme-by-theme basis.
+//
+// $s - integer, the section number we are on
+// $page_section - array of data pertaining to the section
+//
+// Returns a string of the ID for a section
+function section_id($s, $page_section) {
+    $puzzle_options_data = $page_section['options'];
+    
+    $section_id = 'section-' . ($s + 1);
+    if (!empty($puzzle_options_data['id'])) {
+        $section_id = to_slug($puzzle_options_data['id']);
+    } else if (!empty($puzzle_options_data['headline'])) {
+        $section_id = to_slug($puzzle_options_data['headline']);
+    }
+    
+    return $section_id;
+}
+
 ?>
