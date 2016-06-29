@@ -40,7 +40,7 @@ main {
     }
     
     ul, ol {
-        margin-left: rem($space-unit);
+        margin-left: $space-unit;
     }
 }
 

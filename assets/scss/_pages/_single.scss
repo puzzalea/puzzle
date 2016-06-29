@@ -9,8 +9,8 @@
 }
 
 .single-post-content {
-    margin: rem($space-unit) 0;
-    padding: rem($space-unit) 0;
+    margin: $space-unit 0;
+    padding: $space-unit 0;
     border-top: solid 1px $medium-gray;
     
     &.comments-open {
