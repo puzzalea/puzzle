@@ -41,9 +41,14 @@ if (!empty($page_sections)) :
             </div>
             <?php endif; ?>
     
-            <?php if (!empty($puzzle_columns_data)) :
+            <?php
+            if (!empty($puzzle_columns_data)) :
                 if ($puzzle_section_type == 'features' || $puzzle_section_type == 'team-members') {
-                    $span_classes = span_classes($puzzle_columns_num);
+                    if ($puzzle_options_data['layout'] == 'columns') {
+                        $span_classes = span_classes($puzzle_columns_num);
+                    } else {
+                        $span_classes = 'xs-span12';
+                    }
                 }
                 ?>
             <div class="row puzzle-<?php echo $puzzle_section_type; ?>-content">

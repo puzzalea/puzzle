@@ -1,7 +1,6 @@
-<?php if ($puzzle_options_data['layout'] == 'columns') : ?>
-<div class="column <?php echo $span_classes; ?> puzzle-team-member-column">
-<?php else : ?>
-<div class="column xs-span12 puzzle-team-member-row">
+<div class="column <?php echo $span_classes; ?> puzzle-team-member-<? echo ($puzzle_options_data['layout'] == 'columns' ? 'column' : 'row'); ?>">
+
+<?php if ($puzzle_options_data['layout'] == 'rows') : ?>
 <div class="row">
 <div class="column xs-span12 md-span3">
 <?php endif; ?>
@@ -72,11 +71,10 @@ if (!empty($social_media)) : ?>
     </div>
 <?php endif; ?>
 
-</div>
-
 <?php if ($puzzle_options_data['layout'] == 'rows') : ?>
 </div>
 <?php endif; ?>
 
+</div>
 </div>
 </div>
