@@ -67,3 +67,4 @@ if ($disable_smooth_scroll) {
         </div>
     </nav>
     <?php endif; ?>
+    <main>
