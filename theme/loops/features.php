@@ -8,7 +8,7 @@ if (!empty($puzzle_column['link']) && !empty($puzzle_column['icon_link'])) {
     $icon_link_end = '</a>';
 }
 ?>
-<div class="column <?php echo $span_classes; echo ($puzzle_options_data['layout'] == 'rows' ? ' icon-row' : ' icon-column'); echo (!empty($puzzle_column['button_text']) ? ' has-button' : ''); ?>">
+<div class="column <?php echo $span_classes; echo ($puzzle_options_data['layout'] == 'rows' ? ' icon-row' : ' icon-column'); if (!empty($puzzle_column['button_text'])) echo ' has-button'; ?>">
     <div class="column-inner">
         <?php echo $icon_link_start; ?><i class="puzzle-main-icon <?php echo $puzzle_column['icon']; ?>"></i><?php echo $icon_link_end; ?>
         <div class="puzzle-feature-column-content">

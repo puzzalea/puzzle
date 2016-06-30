@@ -1,4 +1,4 @@
-<div class="header-content <?php echo $puzzle_column['background_color']; ?>-background align-text-<?php echo $puzzle_column['align_text']; ?>"<?php echo (!empty($puzzle_column['background_image']) ? ' style="background-image: url(' . wp_get_attachment_url($puzzle_column['background_image']) . ');"' : ''); ?>>
+<div class="header-content <?php echo $puzzle_column['background_color']; ?>-background align-text-<?php echo $puzzle_column['align_text']; ?>"<?php if (!empty($puzzle_column['background_image'])) echo ' style="background-image: url(' . wp_get_attachment_url($puzzle_column['background_image']); ?>>
     <?php if (!empty($puzzle_column['overlay'])) : ?>
     <div class="<?php echo $puzzle_column['background_color']; ?> puzzle-background-overlay"></div>
     <?php endif; ?>

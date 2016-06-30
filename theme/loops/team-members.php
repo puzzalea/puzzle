@@ -21,7 +21,7 @@ if (!empty($puzzle_column['image'])) {
 </div>
 <?php endif; ?>
 
-<div class="<?php echo ($puzzle_options_data['layout'] == 'rows' ? 'column xs-span12 md-span9 ' : ''); ?>puzzle-team-member-content">
+<div class="<?php if ($puzzle_options_data['layout'] == 'rows') echo 'column xs-span12 md-span9 '; ?>puzzle-team-member-content">
 
 <?php if ($puzzle_options_data['layout'] == 'rows') : ?>
 <div class="column-inner">
