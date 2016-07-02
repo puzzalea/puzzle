@@ -33,6 +33,7 @@
             
             .puzzle-feature-column-content {
                 @include flex-grow(1);
+                width: 100%;
             }
             
             ul {

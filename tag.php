@@ -1,5 +1,4 @@
 <?php
-
 global $wp_query;
 
 $posts_per_page = $wp_query->query_vars['posts_per_page'];
