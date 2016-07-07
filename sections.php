@@ -45,7 +45,7 @@ if (!empty($page_sections)) :
             if (!empty($puzzle_columns_data)) :
                 if ($puzzle_section_type == 'features' || $puzzle_section_type == 'team-members') {
                     if ($puzzle_options_data['layout'] == 'columns') {
-                        $span_classes = span_classes($puzzle_columns_num);
+                        $span_classes = ppb_span_classes($puzzle_columns_num);
                     } else {
                         $span_classes = 'xs-span12';
                     }

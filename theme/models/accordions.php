@@ -95,6 +95,6 @@ $accordions->set_group_name('Accordions')
         )
     ));
 
-$puzzle_pieces = new PuzzlePieces;
-$puzzle_pieces->add_section($accordions);
+$puzzle_sections = new PuzzleSections;
+$puzzle_sections->add_section($accordions);
 ?>

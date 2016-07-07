@@ -83,19 +83,19 @@ body {
 main {
   display: block; }
   main > section:first-child {
-    padding-top: 10rem; }
+    padding-top: 13rem; }
     main > section:first-child.puzzle-header {
       padding-top: 0; }
   main > section.no-padding-top:first-child {
     padding-top: 7rem; }
   main > section.large-padding-top:first-child {
-    padding-top: 13rem; }
+    padding-top: 19rem; }
   main ul, main ol {
-    margin-left: 3rem; }
+    margin-left: 6rem; }
 
 section {
   position: relative;
-  padding: 3rem 0;
+  padding: 6rem 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -104,9 +104,9 @@ section {
   section.no-padding-bottom {
     padding-bottom: 0; }
   section.large-padding-top {
-    padding-top: 6rem; }
+    padding-top: 12rem; }
   section.large-padding-bottom {
-    padding-bottom: 6rem; }
+    padding-bottom: 12rem; }
 
 /*-------------*/
 /* Grid System */
@@ -128,13 +128,13 @@ section {
 
 .column-inner {
   position: relative;
-  width: calc(100% - 10px);
-  margin: 0 5px;
+  width: calc(100% - 1rem);
+  margin: 0 0.5rem;
   padding: 1rem; }
   @media all and (min-width: 660px) {
     .column-inner {
-      width: calc(100% - 30px);
-      margin: 0 15px;
+      width: calc(100% - 3rem);
+      margin: 0 1.5rem;
       padding-left: 1.5rem;
       padding-right: 1.5rem; } }
 
@@ -1323,7 +1323,7 @@ a img {
 /* Posts Loop */
 /*------------*/
 .puzzle-loop {
-  padding: 3rem 0;
+  padding: 6rem 0;
   border-top: solid 1px #aaa; }
   .puzzle-loop:first-child {
     padding-top: 0;
@@ -1333,7 +1333,7 @@ a img {
 /* Comments */
 /*----------*/
 .comment {
-  padding: 1.5rem 2rem;
+  padding: 3rem 3.5rem;
   border-bottom: solid 1px #eee;
   list-style: none; }
   .comment:last-child {
@@ -1367,7 +1367,7 @@ a img {
 /* Sidebar */
 /*---------*/
 #sidebar .sidebar-widget {
-  margin: 3rem 0; }
+  margin: 6rem 0; }
   #sidebar .sidebar-widget:first-child {
     margin-top: 10px; }
 #sidebar .post-date {
@@ -1390,7 +1390,7 @@ a img {
 /*------------*/
 #pagination {
   margin: 0;
-  padding: 3rem 0;
+  padding: 6rem 0;
   border-top: solid 1px #aaa;
   list-style: none; }
   #pagination li {
@@ -1419,7 +1419,7 @@ a img {
 /* Footer */
 /*--------*/
 #footer {
-  padding: 1.5rem 0;
+  padding: 3rem 0;
   background-color: #aaa; }
 
 /*-----------------*/
@@ -1529,7 +1529,7 @@ a img {
   display: block;
   width: 60px;
   height: 60px;
-  margin: 0 auto 3rem auto; }
+  margin: 0 auto 6rem auto; }
 .puzzle-features .puzzle-main-icon {
   font-size: 36px;
   line-height: 60px;
@@ -1550,7 +1550,7 @@ a img {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-bottom: 3rem; }
+  padding-bottom: 6rem; }
   .puzzle-features .icon-column .column-inner > * {
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
@@ -1574,7 +1574,7 @@ a img {
     text-align: left; }
 .puzzle-features .icon-column .puzzle-feature-main-button {
   width: 80%;
-  margin-top: 3rem; }
+  margin-top: 6rem; }
 
 .puzzle-features-content {
   -webkit-box-pack: center;
@@ -1716,8 +1716,8 @@ a img {
   margin: 0.5rem 0; }
 
 .single-post-content {
-  margin: 3rem 0;
-  padding: 3rem 0;
+  margin: 6rem 0;
+  padding: 6rem 0;
   border-top: solid 1px #aaa; }
   .single-post-content.comments-open {
     border-bottom: solid 1px #aaa; }

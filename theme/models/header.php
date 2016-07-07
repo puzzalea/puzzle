@@ -125,6 +125,6 @@ $header->set_group_name('Header')
         )
     ));
 
-$puzzle_pieces = new PuzzlePieces;
-$puzzle_pieces->add_section($header);
+$puzzle_sections = new PuzzleSections;
+$puzzle_sections->add_section($header);
 ?>

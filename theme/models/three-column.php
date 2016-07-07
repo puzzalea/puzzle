@@ -91,6 +91,6 @@ $three_column->set_group_name('Three Column')
         )
     ));
 
-$puzzle_pieces = new PuzzlePieces;
-$puzzle_pieces->add_section($three_column);
+$puzzle_sections = new PuzzleSections;
+$puzzle_sections->add_section($three_column);
 ?>

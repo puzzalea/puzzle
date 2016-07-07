@@ -66,15 +66,15 @@ $miscellaneous_widths: (1point5: 1.5, 2point4: 2.4);
 
 .column-inner {
     position: relative;
-    width: calc(100% - 10px);
-    margin: 0 5px;
-    padding: 1rem;
+    width: calc(100% - #{$space-unit / 6});
+    margin: 0 ($space-unit / 12);
+    padding: $space-unit / 6;
     
     @include breakpoint($size-md) {
-        width: calc(100% - 30px);
-        margin: 0 15px;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        width: calc(100% - #{$space-unit / 2});
+        margin: 0 ($space-unit / 4);
+        padding-left: ($space-unit / 4);
+        padding-right: ($space-unit / 4);
     }
 }
 

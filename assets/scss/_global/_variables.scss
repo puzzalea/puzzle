@@ -2,20 +2,20 @@
 // Variables //
 //-----------//
 
-// We try to standardize the sizes for our grid system and media queries.
+// Sizes for grid system and media queries
 $size-sm: 480px;
 $size-md: 660px;
 $size-lg: 850px;
 $size-xl: 1024px;
 
+// General sizes of things
 $max-width: 1200px;
 $nav-height: 7rem;
 
-// We try to standardize the space between things.
-$space-unit: 3rem;
+$space-unit: 6rem;
 $text-space-unit: 1rem;
 
-// The fonts
+// Font families
 $open-sans: 'Open Sans', sans-serif;
 
 // Font weights so we don't have to remember stuff like "semibold" is 600, etc.

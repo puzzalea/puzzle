@@ -34,9 +34,9 @@ function section_id($s, $page_section) {
     
     $section_id = 'section-' . ($s + 1);
     if (!empty($puzzle_options_data['id'])) {
-        $section_id = to_slug($puzzle_options_data['id']);
+        $section_id = ppb_to_slug($puzzle_options_data['id']);
     } else if (!empty($puzzle_options_data['headline'])) {
-        $section_id = to_slug($puzzle_options_data['headline']);
+        $section_id = ppb_to_slug($puzzle_options_data['headline']);
     }
     
     return $section_id;

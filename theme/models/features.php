@@ -123,6 +123,6 @@ $features->set_group_name('Features')
         )
     ));
 
-$puzzle_pieces = new PuzzlePieces;
-$puzzle_pieces->add_section($features);
+$puzzle_sections = new PuzzleSections;
+$puzzle_sections->add_section($features);
 ?>

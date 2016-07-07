@@ -90,6 +90,6 @@ $two_column->set_group_name('Two Column')
         )
     ));
 
-$puzzle_pieces = new PuzzlePieces;
-$puzzle_pieces->add_section($two_column);
+$puzzle_sections = new PuzzleSections;
+$puzzle_sections->add_section($two_column);
 ?>

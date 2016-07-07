@@ -1,7 +1,7 @@
 <?php
-// Puzzle Pieces required settings
-function puzzle_config_location() { return 'theme/settings/puzzle_config.php'; }
+// Puzzle Pieces required files
 require_once('puzzle_pieces/puzzle_pieces.php');
+require_once('theme/settings/puzzle_config.php');
 
 // Register Menus
 function puzzle_menus() {

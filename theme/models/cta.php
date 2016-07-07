@@ -93,6 +93,6 @@ $cta->set_group_name('Call to Action')
         )
     ));
 
-$puzzle_pieces = new PuzzlePieces;
-$puzzle_pieces->add_section($cta);
+$puzzle_sections = new PuzzleSections;
+$puzzle_sections->add_section($cta);
 ?>

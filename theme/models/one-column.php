@@ -80,6 +80,6 @@ $one_column->set_group_name('One Column')
         )
     ));
 
-$puzzle_pieces = new PuzzlePieces;
-$puzzle_pieces->add_section($one_column);
+$puzzle_sections = new PuzzleSections;
+$puzzle_sections->add_section($one_column);
 ?>
