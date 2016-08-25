@@ -13,14 +13,14 @@ One of these days I will make an even blanker starter theme that does not have s
 1. `functions.php` is deliberately scant because `functions.php` can quickly spiral out of control. Most functionality is included in the `theme` directory, and `functions.php` includes these files as needed.
 1. The `theme` directory contains the custom files for the theme.
     - `miscellaneous` - Extra code
-        - `custom\_style.php` - Generates custom CSS using the settings that the user can change through Appearance > Customize
+        - `custom_style.php` - Generates custom CSS using the settings that the user can change through Appearance > Customize
         - `helpers.php` - Miscellaneous helper functions
     - `partials` - Various WordPress partials such as the post loop, navigation bar, and pagination
     - `settings` - Various settings for the theme. This entire directory is globbed by `functions.php`.
         - `assets.php` - Enqueues styles and scripts
-        - `customize\_theme.php` - The settings available through Appearance > Customize
+        - `customize_theme.php` - The settings available through Appearance > Customize
         - `menus.php` - Initializes menus
-        - `puzzle\_colors.php` - Settings for the theme colors
+        - `puzzle_colors.php` - Settings for the theme colors
         - `sidebar.php` - Initializes sidebar widget area
 1. Towards the end of the coding/design process, create a screenshot of the theme, name it `screenshot.png`, and place it in the root directory of the theme. Screenshots are 880x660 pixels.
 
