@@ -13,7 +13,7 @@ get_header();
                     <?php
                     while (have_posts()) {
                         the_post();
-                        get_template_part('theme/loops/loop');
+                        get_template_part('theme/partials/loop');
                     }
                     
                     get_template_part('theme/partials/pagination');

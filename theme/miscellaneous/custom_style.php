@@ -6,7 +6,7 @@
  *
  * The CSS here is converted into /assets/css/custom.css by functions.php if
  * the sheet does not exist yet, and then is updated every time the user
- * updates the theme customizations (see /theme/customize_theme.php).
+ * updates the theme customizations (see /theme/setup/customize_theme.php).
  */
 
 $puzzle_colors = new PuzzleColors;
