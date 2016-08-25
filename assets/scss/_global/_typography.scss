@@ -134,6 +134,10 @@ a {
         font-size: 1.6rem;
     }
     
+    p, li {
+        line-height: 2;
+    }
+    
     hr {
         margin: ($text-space-unit * 3) 0;
     }

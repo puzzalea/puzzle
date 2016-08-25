@@ -49,7 +49,7 @@ function puzzle_customize_register($wp_customize) {
     /* Navigation Bar */
     $wp_customize->add_section('puzzle_nav' , array(
         'title'      => 'Navigation Bar',
-        'priority'   => 200,
+        'priority'   => 200
     ));
     
     $wp_customize->add_setting('nav_background_color', array(
@@ -124,7 +124,7 @@ add_action('customize_register', 'puzzle_customize_register');
 /* Save custom CSS using user-defined colors */
 function puzzle_save_custom_style() {
     ob_start();
-    require(get_stylesheet_directory() . '/theme/settings/custom_style.php');
+    require(get_stylesheet_directory() . '/theme/miscellaneous/custom_style.php');
     $css = ob_get_clean();
     
     global $wp_filesystem;

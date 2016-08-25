@@ -37,7 +37,7 @@ input, select {
 }
 
 button, input[type='button'], input[type='submit'] {
-    @extend %puzzle-button;
+    @extend %button;
     text-transform: uppercase;
     white-space: normal;
     cursor: pointer;

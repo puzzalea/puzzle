@@ -195,7 +195,7 @@ if ($footer_background_color == 'secondary') {
     background-color: <?php echo $secondary_color; ?>;
 }
 
-.puzzle-header .puzzle-header-text-background-primary-color {
+.puzzle-carousel-text-background-primary {
 <?php
     $text_background_primary_color = 'rgba(' . hex2rgb($primary_color) . ', 0.8)';
     $text_background_primary_color_shadow = '10px 0 0 ' . $text_background_primary_color . ', -10px 0 0 ' . $text_background_primary_color;
@@ -206,7 +206,7 @@ if ($footer_background_color == 'secondary') {
     box-shadow:         <?php echo $text_background_primary_color_shadow; ?>;
 }
 
-.puzzle-header .puzzle-header-text-background-secondary-color {
+.puzzle-carousel-text-background-secondary {
 <?php
     $text_background_secondary_color = 'rgba(' . hex2rgb($secondary_color) . ', 0.75)';
     $text_background_secondary_color_shadow = '10px 0 0 ' . $text_background_secondary_color . ', -10px 0 0 ' . $text_background_secondary_color;
@@ -217,19 +217,19 @@ if ($footer_background_color == 'secondary') {
     box-shadow:         <?php echo $text_background_secondary_color_shadow; ?>;
 }
 
-.puzzle-header .puzzle-header-text-primary-color {
+.puzzle-carousel-text-primary {
     color: <?php echo $primary_color; ?>;
 }
 
-.puzzle-header .puzzle-header-text-secondary-color {
+.puzzle-carousel-text-secondary {
     color: <?php echo $secondary_color; ?>;
 }
 
-.puzzle-accordions .column-inner > h5:first-child:hover .fa {
+.puzzle-accordion-headline:hover .fa {
     color: <?php echo $secondary_color; ?>;
 }
 
-.puzzle-features .column-inner > i:first-child, .puzzle-accordions .column-inner > h5:first-child i {
+.puzzle-features .column-inner > i:first-child, .puzzle-accordion-headline i {
     color: <?php echo $primary_color; ?>;
 }
 
