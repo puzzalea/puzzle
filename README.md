@@ -22,7 +22,7 @@ One of these days I will make an even blanker starter theme that does not have s
         - `menus.php` - Initializes menus
         - `puzzle_colors.php` - Settings for the theme colors
         - `sidebar.php` - Initializes sidebar widget area
-1. Towards the end of the coding/design process, create a screenshot of the theme, name it `screenshot.png`, and place it in the root directory of the theme. Screenshots are 880x660 pixels.
+1. Towards the end of the coding/design process, create a screenshot of the theme, name it `screenshot.png`, and place it in the root directory of the theme. [The recommended screenshot size is 1200x900 pixels](https://codex.wordpress.org/Theme_Development#Screenshot), although any 4:3 image size is technically acceptable.
 
 ### Puzzle Pieces ###
 
