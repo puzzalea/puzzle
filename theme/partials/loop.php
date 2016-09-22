@@ -15,5 +15,5 @@
     
     the_excerpt();
     ?>
-    <a class="puzzle-button puzzle-button-secondary-color" href="<?php echo get_the_permalink($post->ID); ?>">Read More</a>
+    <a class="puzzle-button" href="<?php echo get_the_permalink($post->ID); ?>">Read More</a>
 </div>

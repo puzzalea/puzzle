@@ -3,45 +3,49 @@
 /*------------*/
 
 #pagination {
-    @extend %clearfix;
-    margin: 0;
-    padding: $space-unit 0;
-    border-top: solid 1px $medium-gray;
-    list-style: none;
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include justify-content(center);
     
-    li {
-        display: inline-block;
-        font-size: 1.8rem;
+    @include breakpoint($size-md) {
+        @include justify-content(flex-start);
+    }
+}
+
+.page-numbers {
+    @include flex(0 1 auto);
+    margin: 0.2rem 0.2rem;
+    padding: 0.5rem 0.7rem;
+    border: solid 1px $medium-gray;
+    color: $medium-gray;
+    text-decoration: none;
+    
+    &.current {
+        background-color: $medium-gray;
+        color: #fff;
     }
     
-    a {
-        @extend %default-border-radius;
-        display: inline-block;
-        padding: 15px 25px;
-        background-color: #fff;
-        border: solid 2px $medium-gray;
-        text-decoration: none;
-        
-        &:hover {
-            background-color: $medium-gray;
-            border-color: transparent;
-            color: #fff;
-        }
+    &.dots {
+        border-color: transparent;
     }
     
-    #newer-pages {
-        float: left;
-        
-        .fa {
-            margin-right: 5px;
-        }
+    @include breakpoint($size-md) {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+a.page-numbers {
+    border-color: transparent;
+    background-color: $light-gray;
+    
+    &:hover, &:focus {
+        background-color: #555;
+        color: #fff;
     }
     
-    #older-pages {
-        float: right;
-        
-        .fa {
-            margin-left: 5px;
-        }
+    &:active {
+        background-color: #333;
+        color: #fff;
     }
 }

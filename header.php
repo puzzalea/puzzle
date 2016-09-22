@@ -15,5 +15,5 @@ if ($disable_smooth_scroll) {
     <?php wp_head(); ?>
 </head>
 <body <?php body_class($smooth_scroll_class); ?>>
-    <?php if (get_theme_mod('logo') || has_nav_menu('primary')) get_template_part('theme/partials/nav'); ?>
+    <?php if (has_custom_logo() || has_nav_menu('primary')) get_template_part('theme/partials/nav'); ?>
     <main>

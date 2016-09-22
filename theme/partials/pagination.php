@@ -1,11 +1,24 @@
-<?php if (get_previous_posts_link() || get_next_posts_link()) : ?>
-<ul id="pagination">
-    <?php if (get_previous_posts_link()) : ?>
-    <li id="newer-pages"><?php previous_posts_link('<i class="fa fa-arrow-circle-left"></i>Newer'); ?></li>
+<?php
+$prev_text = '<i class="ei ei-arrow-caret-left"></i> ' . __('Older', 'puzzle');
+$next_text = __('Newer', 'puzzle') . ' <i class="ei ei-arrow-caret-right"></i>';
+
+if (get_previous_posts_link() || get_next_posts_link()) : ?>
+<div id="pagination">
+    <?php if (!get_previous_posts_link()) : ?>
+    <span class="prev page-numbers"><?php echo $prev_text; ?></span>
     <?php endif; ?>
     
-    <?php if (get_next_posts_link()) : ?>
-    <li id="older-pages"><?php next_posts_link('<i class="fa fa-arrow-circle-right"></i>Older'); ?></li>
+    <?php
+    $args = array(
+        'mid_size'  => 1,
+        'prev_text' => $prev_text,
+        'next_text' => $next_text
+    );
+    echo paginate_links($args);
+    ?>
+    
+    <?php if (!get_next_posts_link()) : ?>
+    <span class="next page-numbers"><?php echo $next_text; ?></span>
     <?php endif; ?>
-</ul>
+</div>
 <?php endif; ?>
