@@ -125,4 +125,11 @@ function puzzle_save_custom_style() {
     }
 }
 add_action('customize_save_after', 'puzzle_save_custom_style');
+
+/* Checks if the custom CSS exists. If it does not, create it. */
+function puzzle_check_if_custom_style_exists() {
+    if (!file_exists(get_stylesheet_directory() . '/assets/css/custom.css')) {
+        puzzle_save_custom_style();
+    }
+}
 ?>

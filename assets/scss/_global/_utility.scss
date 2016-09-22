@@ -36,19 +36,6 @@
         background-color: transparent;
         border-color: #fff;
     }
-    
-    &.puzzle-button-has-icon {
-        position: relative;
-        padding-right: 20px;
-        
-        &:before {
-            position: absolute;
-            right: 8px;
-            display: inline-block;
-            font-family: 'FontAwesome';
-            content: '\f01a';
-        }
-    }
 }
 
 .primary-color-background {
