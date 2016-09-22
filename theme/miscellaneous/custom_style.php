@@ -274,7 +274,7 @@ input[type='submit']:hover,
 .primary-background input[type='button']:hover,
 .primary-background input[type='submit']:hover,
 .secondary-background .puzzle-button:hover,
-.secondary-background input[type='button']:hover ,
+.secondary-background input[type='button']:hover,
 .secondary-background input[type='submit']:hover {
     background-color: #fff;
     border-color: #fff;

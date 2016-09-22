@@ -33,7 +33,7 @@ function puzzle_customize_register($wp_customize) {
     );
     
     /* Navigation Bar */
-    $wp_customize->add_section('puzzle_nav' , array(
+    $wp_customize->add_section('puzzle_nav', array(
         'title'      => 'Navigation Bar',
         'priority'   => 200
     ));
@@ -53,7 +53,7 @@ function puzzle_customize_register($wp_customize) {
     ));
     
     /* Footer */
-    $wp_customize->add_section('puzzle_footer' , array(
+    $wp_customize->add_section('puzzle_footer', array(
         'title'      => 'Footer',
         'priority'   => 210,
     ));
@@ -86,7 +86,7 @@ function puzzle_customize_register($wp_customize) {
     ));
     
     /* Miscellaneous */
-    $wp_customize->add_section('puzzle_miscellaneous' , array(
+    $wp_customize->add_section('puzzle_miscellaneous', array(
         'title'      => 'Miscellaneous',
         'priority'   => 220,
     ));
