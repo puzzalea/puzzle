@@ -8,10 +8,11 @@
 /* General settings */
 function puzzle_modify_settings($settings) {
     /*
-     * Add shortcode buttons to WYSIWYG editor.
-     * Default is true, shortcode buttons are available.
+     * Add indicating if button formats are available in the formats dropdown
+     * in the WYSIWYG editor.
+     * Default is true, button formats are available.
      */
-    $settings->set_shortcodes(true);
+    $settings->set_button_formats(true);
 
     /*
      * Choose which post types the page builder is available for.
@@ -74,6 +75,11 @@ function puzzle_modify_puzzle_fields($f) {
     /* Add field modifications here */
     // $f->field('background_color', false)
     //     ->remove_option('gray');
+    
+    /* Add new fields */
+    // foreach (glob(get_stylesheet_directory() . '/theme/fields/*.php') as $filename) {
+    //     include $filename;
+    // }
 }
 add_action('ppb_modify_fields', 'puzzle_modify_puzzle_fields');
 
