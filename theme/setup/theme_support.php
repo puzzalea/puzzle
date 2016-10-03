@@ -2,7 +2,7 @@
 
 /*
  * Puzzle
- * Helper functions
+ * Theme Support
  */
 
 /* Set $content_width variable */

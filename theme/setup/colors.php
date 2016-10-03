@@ -37,4 +37,5 @@ $text_light->set_id('text_light')
 
 $puzzle_colors = new PuzzleColors;
 $puzzle_colors->add_colors(array($primary_color, $secondary_color, $headline_dark, $text_dark, $headline_light, $text_light));
+
 ?>

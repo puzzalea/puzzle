@@ -2,7 +2,7 @@
 
 /*
  * Puzzle
- * Custom Editor Styles
+ * Custom Editor Style
  */
 
 /*

@@ -132,4 +132,5 @@ function puzzle_check_if_custom_style_exists() {
         puzzle_save_custom_style();
     }
 }
+
 ?>
