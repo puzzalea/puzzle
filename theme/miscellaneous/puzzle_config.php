@@ -8,8 +8,8 @@
 /* General settings */
 function puzzle_modify_settings($settings) {
     /*
-     * Add indicating if button formats are available in the formats dropdown
-     * in the WYSIWYG editor.
+     * Set if button formats are available in the formats dropdown in the
+     * WYSIWYG editor.
      * Default is true, button formats are available.
      */
     $settings->set_button_formats(true);
@@ -20,6 +20,29 @@ function puzzle_modify_settings($settings) {
      * Default is array('page'), the page builder is only available for pages.
      */
     $settings->set_page_builder_post_types(array('page'));
+    
+    /*
+     * Alter how sections appear on the page on the frontend.
+     *
+     * Default is 'plugin_template', the template built into the plugin will
+     * be used, which combines the active theme's header.php and footer.php
+     * with the sections.
+     *
+     * Also accepts these arguments:
+     * - 'the_content' - sections will replace the main content of a page,
+     *   using the theme's templates
+     * - 'custom' - the user can set a specific one of their theme's templates,
+     *   and sections will replace the content (this template can be set in the
+     *   'set_custom_template' function)
+     */
+    $settings->set_display_sections_in('plugin_template');
+    
+    /*
+     * Set a theme's template to be used for page builder sections on the
+     * front end. Sections will be inserted in 'the_content()'. Will only take
+     * effect if 'set_display_sections_in' is set to 'custom'.
+     */
+    // $settings->set_custom_template('my-theme-template.php');
 
     /*
      * Set directory that contains section template parts.
@@ -53,9 +76,9 @@ function puzzle_modify_puzzle_icon_libraries($libraries) {
 
     /*
      * Set default icon in page builder
-     * Default is 'fa fa-star'
+     * Default is 'ei ei-star-alt'
      */
-    $libraries->set_default_icon('fa fa-star');
+    $libraries->set_default_icon('ei ei-star-alt');
 
     /*
      * Add a "no icon" choice to Icon Library

@@ -3,7 +3,7 @@ $prev_text = '<i class="ei ei-arrow-caret-left"></i> ' . __('Older', 'puzzle');
 $next_text = __('Newer', 'puzzle') . ' <i class="ei ei-arrow-caret-right"></i>';
 
 if (get_previous_posts_link() || get_next_posts_link()) : ?>
-<div id="pagination">
+<div class="pagination">
     <?php if (!get_previous_posts_link()) : ?>
     <span class="prev page-numbers"><?php echo $prev_text; ?></span>
     <?php endif; ?>

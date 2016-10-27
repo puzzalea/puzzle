@@ -1,7 +1,7 @@
-<nav id="nav">
-    <div class="row">
+<nav class="main-nav">
+    <div class="pz-row">
         <?php if (has_custom_logo()) : ?>
-        <div class="column xs-span8 sm-span6 md-span4 lg-span3">
+        <div class="column xs-8 sm-6 md-4 lg-3">
             <a href="<?php echo get_site_url(); ?>">
                 <?php the_custom_logo(); ?>
             </a>
@@ -9,36 +9,20 @@
         <?php endif; ?>
         
         <?php if (has_nav_menu('primary')) : ?>
-        <div class="column <?php echo (has_custom_logo() ? 'xs-span4 sm-span6 md-span8 lg-span9' : 'xs-span12'); ?>">
+        <div class="column <?php echo (has_custom_logo() ? 'xs-4 sm-6 md-8 lg-9' : 'xs-12'); ?>">
             <?php
             $args = array(
                 'theme_location'  => 'primary',
-                'menu'            => '',
-                'container'       => 'div',
-                'container_id'    => 'nav-menu',
-                'before'          => '',
-                'after'           => '',
-                'link_before'     => '',
-                'link_after'      => '',
-                'items_wrap'      => '<ul id="%1$s">%3$s</ul>',
-                'depth'           => 0,
-                'walker'          => ''
+                'container_id'    => 'desktop-nav-menu',
+                'container_class' => 'desktop-nav-menu'
             );
             wp_nav_menu($args);
             
             $args = array(
                 'theme_location'  => 'primary',
-                'menu'            => '',
-                'container'       => 'div',
                 'container_id'    => 'dl-menu',
                 'container_class' => 'dl-menuwrapper',
-                'before'          => '',
-                'after'           => '',
-                'link_before'     => '',
-                'link_after'      => '',
-                'items_wrap'      => '<button class="dl-trigger">Open Menu</button><ul class="dl-menu">%3$s</ul>',
-                'depth'           => 0,
-                'walker'          => ''
+                'items_wrap'      => '<button class="dl-trigger">Open Menu</button><ul class="dl-menu">%3$s</ul>'
             );
             wp_nav_menu($args);
             ?>

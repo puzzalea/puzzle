@@ -2,7 +2,7 @@
 /* Navigation Bar */
 /*----------------*/
 
-#nav {
+.main-nav {
     @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
     position: fixed;
     z-index: 2;
@@ -10,7 +10,7 @@
     background-color: $medium-gray;
     background-color: rgba($medium-gray, 0.9);
     
-    .row {
+    .pz-row {
         @include align-items(center);
         height: $nav-height;
         padding: 5px 15px;
@@ -104,7 +104,7 @@
 }
 
 /* Desktop menu */
-#nav-menu {
+.desktop-nav-menu {
     display: none;
     
     ul {
@@ -116,6 +116,7 @@
             position: relative;
             vertical-align: middle;
             display: inline-block;
+            font-size: 1.6rem;
         
             a {
                 display: block;
@@ -190,7 +191,7 @@
         display: none;
     }
     
-    #nav-menu {
+    .desktop-nav-menu {
         display: block;
     }
 }

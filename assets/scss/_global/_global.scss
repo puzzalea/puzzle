@@ -15,7 +15,7 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
     
     @include breakpoint($size-md) {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         line-height: 2;
     }
 }
@@ -27,16 +27,16 @@ main {
         &:first-child {
             padding-top: $nav-height + $space-unit;
         
-            &.puzzle-carousel {
+            &.pz-carousel {
                 padding-top: 0;
             }
         }
         
-        &.no-padding-top:first-child {
+        &.pz-no-padding-top:first-child {
             padding-top: $nav-height;
         }
         
-        &.large-padding-top:first-child {
+        &.pz-large-padding-top:first-child {
             padding-top: $nav-height + ($space-unit * 2);
         }
     }
@@ -53,19 +53,19 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     
-    &.no-padding-top {
+    &.pz-no-padding-top {
         padding-top: 0;
     }
     
-    &.no-padding-bottom {
+    &.pz-no-padding-bottom {
         padding-bottom: 0;
     }
     
-    &.large-padding-top {
+    &.pz-large-padding-top {
         padding-top: $space-unit * 2;
     }
     
-    &.large-padding-bottom {
+    &.pz-large-padding-bottom {
         padding-bottom: $space-unit * 2;
     }
 }

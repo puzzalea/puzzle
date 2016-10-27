@@ -4,9 +4,9 @@
  * Puzzle
  * Custom style colors using admin options
  *
- * The CSS here is converted into /assets/css/custom.css by functions.php if
- * the sheet does not exist yet, and then is updated every time the user
- * updates the theme customizations (see /theme/setup/customize_theme.php).
+ * The CSS here is converted into /assets/css/custom.css if the sheet does not
+ * exist yet, and then is updated every time the user updates the theme
+ * customizations (see /theme/setup/customize_theme.php).
  */
 
 $puzzle_colors = new PuzzleColors;
@@ -24,41 +24,12 @@ $footer_background_color = get_theme_mod('footer_background_color', 'primary');
 ?>
 /* Text */
 
-h1, h2, h3, h4, h5, h6, th,
-.dark-text-color-scheme h1,
-.dark-text-color-scheme h2,
-.dark-text-color-scheme h3,
-.dark-text-color-scheme h4,
-.dark-text-color-scheme h5,
-.dark-text-color-scheme h6,
-.dark-text-color-scheme th {
+h1, h2, h3, h4, h5, h6, th {
     color: <?php echo $headline_dark; ?>;
 }
 
-body, p, li, td,
-.dark-text-color-scheme,
-.dark-text-color-scheme p,
-.dark-text-color-scheme li,
-.dark-text-color-scheme td {
+body, p, li, td {
     color: <?php echo $text_dark; ?>;
-}
-
-.light-text-color-scheme h1,
-.light-text-color-scheme h2,
-.light-text-color-scheme h3,
-.light-text-color-scheme h4,
-.light-text-color-scheme h5,
-.light-text-color-scheme h6,
-.light-text-color-scheme th {
-    color: <?php echo $headline_light; ?>;
-}
-
-.light-text-color-scheme,
-.light-text-color-scheme p,
-.light-text-color-scheme li,
-.light-text-color-scheme td,
-.light-text-color-scheme a {
-    color: <?php echo $text_light; ?>;
 }
 
 /* Links */
@@ -81,16 +52,6 @@ input:focus, select:focus, textarea:focus {
     border-color: <?php echo $primary_color; ?>;
 }
 
-/* Section Backgrounds */
-
-.primary-background {
-    background-color: <?php echo $primary_color; ?>;
-}
-
-.secondary-background {
-    background-color: <?php echo $secondary_color; ?>;
-}
-
 /* Navigation Bar */
 <?php
 $nav_secondary_color = $primary_color;
@@ -111,12 +72,12 @@ if ($nav_background_color == 'secondary') {
 }
 ?>
 
-#nav {
+.main-nav {
     background-color: <?php echo $nav_primary_color; ?>;
     background-color: rgba(<?php echo hex2rgb($nav_primary_color); ?>, 0.9);
 }
 
-#nav a {
+.main-nav a {
     color: <?php echo $nav_text_color; ?>;
 }
 
@@ -127,7 +88,7 @@ if ($nav_background_color == 'secondary') {
 #dl-menu.dl-menuwrapper ul,
 #dl-menu.dl-menuwrapper button.dl-active,
 #dl-menu.dl-menuwrapper button:hover,
-#nav-menu ul ul {
+.desktop-nav-menu ul ul {
     background: <?php echo $nav_secondary_color; ?>;
 }
 <?php if ($nav_primary_color == '#fff' || $nav_primary_color == '#eee') : ?>
@@ -173,57 +134,23 @@ if ($footer_background_color == 'secondary') {
 }
 ?>
 
-#footer {
+.main-footer {
     background-color: <?php echo $footer_primary_color; ?>
 }
 
-#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+.main-footer h1, .main-footer h2, .main-footer h3, .main-footer h4, .main-footer h5, .main-footer h6 {
     color: <?php echo $footer_headline_color; ?>;
 }
 
-#footer, #footer p, #footer li, #footer th, #footer td, #footer a {
+.main-footer, .main-footer p, .main-footer li, .main-footer th, .main-footer td, .main-footer a {
     color: <?php echo $footer_text_color; ?>
-}
-
-/* Sections */
-
-.owl-theme .owl-controls .owl-page.active span {
-    background-color: <?php echo $primary_color; ?>;
-}
-
-.owl-theme .owl-controls.clickable .owl-page:hover span {
-    background-color: <?php echo $secondary_color; ?>;
-}
-
-.puzzle-carousel-text-primary {
-    color: <?php echo $primary_color; ?>;
-}
-
-.puzzle-carousel-text-secondary {
-    color: <?php echo $secondary_color; ?>;
-}
-
-.puzzle-accordion-headline:hover .fa {
-    color: <?php echo $secondary_color; ?>;
-}
-
-.puzzle-features .puzzle-main-icon, .puzzle-accordion-headline i {
-    color: <?php echo $primary_color; ?>;
-}
-
-.puzzle-features.light-text-color-scheme .puzzle-main-icon {
-    color: <?php echo $headline_light; ?>;
 }
 
 /* Buttons */
 
-.puzzle-button,
 button,
 input[type='button'],
 input[type='submit'],
-.puzzle-button.puzzle-button-secondary:hover,
-.secondary-background .puzzle-button.puzzle-button-white:hover,
-.secondary-background .puzzle-button.puzzle-button-secondary,
 .categories .cat-item a,
 .single-post-page-links a:hover,
 .comment-reply-link,
@@ -234,51 +161,15 @@ a.page-numbers:hover,
     color: #fff;
 }
 
-.white-background .puzzle-button.puzzle-button-white {
-    border-color: <?php echo $primary_color; ?>;
-    color: <?php echo $primary_color; ?>;
-}
-
-.puzzle-button.puzzle-button-white,
-.primary-background .puzzle-button.puzzle-button-white {
-    color: <?php echo $primary_color; ?>;
-}
-
-.white-background .puzzle-button.puzzle-button-transparent {
-    border-color: <?php echo $secondary_color; ?>;
-    color: <?php echo $secondary_color; ?>;
-}
-
-.puzzle-button:hover,
-.puzzle-button.puzzle-button-white:hover,
-.puzzle-button.puzzle-button-transparent:hover,
 button:hover,
 input[type='button']:hover,
 input[type='submit']:hover,
-.puzzle-button.puzzle-button-secondary,
-.primary-background .puzzle-button,
-.primary-background button,
-.primary-background input[type='button'],
-.primary-background input[type='submit'],
-.primary-background .puzzle-button.puzzle-button-white:hover,
 .categories .cat-item a:hover,
 #cancel-comment-reply-link:hover,
 .comment-reply-link:hover {
     background-color: <?php echo $secondary_color; ?>;
     border-color: <?php echo $secondary_color; ?>;
     color: #fff;
-}
-
-.primary-background .puzzle-button:hover,
-.primary-background button:hover,
-.primary-background input[type='button']:hover,
-.primary-background input[type='submit']:hover,
-.secondary-background .puzzle-button:hover,
-.secondary-background input[type='button']:hover,
-.secondary-background input[type='submit']:hover {
-    background-color: #fff;
-    border-color: #fff;
-    color: <?php echo $primary_color; ?>;
 }
 
 /* Blog */
