@@ -98,7 +98,7 @@ hr {
 }
 
 a {
-    @include transition(all 0.4s ease);
+    @extend %default-transition;
 }
 
 @include breakpoint($size-md) {

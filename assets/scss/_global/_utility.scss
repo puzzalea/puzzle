@@ -12,7 +12,7 @@
     line-height: 1.5;
     text-align: center;
     text-decoration: none;
-    @include transition (all 0.4s ease);
+    @extend %default-transition;
     
     &:hover {
         color: #fff;
@@ -29,6 +29,10 @@
 
 %default-border-radius {
     border-radius: 5px;
+}
+
+%default-transition {
+    transition: all 0.4s ease;
 }
 
 %page-max-width {
