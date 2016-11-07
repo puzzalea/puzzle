@@ -13,7 +13,7 @@ function puzzle_modify_settings($settings) {
      * Default is true, button formats are available.
      */
     $settings->set_button_formats(true);
-
+    
     /*
      * Choose which post types the page builder is available for.
      * Takes an array of post types.
@@ -65,6 +65,31 @@ function puzzle_modify_settings($settings) {
 }
 add_action('ppb_modify_settings', 'puzzle_modify_settings');
 
+/* Color modifications */
+function puzzle_modify_puzzle_colors($colors) {
+    /* Edit existing theme colors */
+    // $colors->theme_color('primary')->set_color('#f6a4cd')
+    //     ->set_name('Pink')
+    //     ->set_text_color_scheme('dark');
+    
+    /* Add new colors */
+    // $accent = new PuzzleColor;
+    // $accent->set_name('Accent Color')
+    //     ->set_id('accent')
+    //     ->set_color('#f00')
+    //     ->set_text_color_scheme('light');
+    //
+    // $colors->add_theme_color($accent);
+    
+    /* Edit text colors */
+    // $colors->set_text_colors(array(
+    //     'headline_dark'     => '#000',
+    //     'text_dark'         => '#333',
+    //     'headline_light'    => '#eee',
+    //     'text_light'        => '#ddd'
+    // ));
+}
+
 /*
  * Icon library modifications
  * This will only take effect if the icon library is active.
@@ -108,9 +133,22 @@ add_action('ppb_modify_fields', 'puzzle_modify_puzzle_fields');
 
 /* Section modifications */
 function puzzle_modify_puzzle_sections($puzzle_sections, $f) {
-    /* Remove sections by their slugs */
+    /*
+     * Remove or keep sections by their slugs
+     *
+     * Default sections that come bundled with the Puzzle Page Builder plugin:
+     * - accordions
+     * - call-to-action
+     * - carousel
+     * - features
+     * - one-column
+     * - team-members
+     * - three-column
+     * - two-column
+     */
     // $puzzle_sections->remove_section('accordions');
     // $puzzle_sections->remove_sections(array('accordions', 'carousel'));
+    // $puzzle_sections->keep_sections(array('one-column', 'two-column'));
     
     /* Add new sections */
     // foreach (glob(get_stylesheet_directory() . '/theme/sections/*.php') as $filename) {

@@ -9,15 +9,17 @@
  * customizations (see /theme/setup/customize_theme.php).
  */
 
+$theme_colors = puzzle_theme_colors();
+
 $puzzle_colors = new PuzzleColors;
 $puzzle_default_colors = $puzzle_colors->colors();
 
-$primary_color = get_theme_mod('primary_color', $puzzle_default_colors['primary_color']->default_color());
-$secondary_color = get_theme_mod('secondary_color', $puzzle_default_colors['secondary_color']->default_color());
-$headline_dark = get_theme_mod('headline_dark', $puzzle_default_colors['headline_dark']->default_color());
-$text_dark = get_theme_mod('text_dark', $puzzle_default_colors['text_dark']->default_color());
-$headline_light = get_theme_mod('headline_light', $puzzle_default_colors['headline_light']->default_color());
-$text_light = get_theme_mod('text_light', $puzzle_default_colors['text_light']->default_color());
+$primary_color = $theme_colors['primary_color'];
+$secondary_color = $theme_colors['secondary_color'];
+$headline_dark = $theme_colors['headline_dark'];
+$text_dark = $theme_colors['text_dark'];
+$headline_light = $theme_colors['headline_light'];
+$text_light = $theme_colors['text_light'];
 
 $nav_background_color = get_theme_mod('nav_background_color', 'primary');
 $footer_background_color = get_theme_mod('footer_background_color', 'primary');
