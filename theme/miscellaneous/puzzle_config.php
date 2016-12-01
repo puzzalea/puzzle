@@ -62,10 +62,31 @@ function puzzle_modify_settings($settings) {
      * Default is true, icon library is available.
      */
     $settings->set_icon_library(true);
+    
+    /*
+     * Set section and column spacing
+     */
+    $settings->set_spacing(array(
+        'unit'              => 'px',
+        'section_padding'   => 30,
+        'column_padding'    => 15,
+        'column_margin'     => 10
+    ));
 }
 add_action('ppb_modify_settings', 'puzzle_modify_settings');
 
-/* Color modifications */
+/*
+ * Color modifications
+ *
+ * Default colors that come bundled with the Puzzle Page Builder plugin:
+ * - Primary Color - id: primary, color: #3b54a5, text color scheme: light
+ * - Secondary Color - id: secondary, color: #2cb799, text color scheme: light
+ * - White - id: white, color: #fff, text color scheme: dark
+ * - Light Gray - id: light-gray, color: #eee, text color scheme: dark
+ * - Medium Gray - id: medium-gray, color: #aaa, text color scheme: light
+ * - Dark Gray - id: dark-gray, color: #444, text color scheme: light
+ * - Black - id: black, color: #000, text color scheme: light
+ */
 function puzzle_modify_puzzle_colors($colors) {
     /* Edit existing theme colors */
     // $colors->theme_color('primary')->set_color('#f6a4cd')
@@ -83,12 +104,21 @@ function puzzle_modify_puzzle_colors($colors) {
     
     /* Edit text colors */
     // $colors->set_text_colors(array(
-    //     'headline_dark'     => '#000',
-    //     'text_dark'         => '#333',
-    //     'headline_light'    => '#eee',
-    //     'text_light'        => '#ddd'
+    //     'headline_dark'     => '#333',
+    //     'text_dark'         => '#555',
+    //     'headline_light'    => '#fff',
+    //     'text_light'        => '#fff'
+    // ));
+    
+    /* Edit link colors */
+    // $colors->set_link_colors(array(
+    //     'link_dark'         => '#3b54a5',
+    //     'link_dark_hover'   => '#2cb799',
+    //     'link_light'        => '#fff',
+    //     'link_light_hover'  => 'rgba(255, 255, 255, 0.75)'
     // ));
 }
+add_action('ppb_modify_colors', 'puzzle_modify_puzzle_colors');
 
 /*
  * Icon library modifications
@@ -131,21 +161,21 @@ function puzzle_modify_puzzle_fields($f) {
 }
 add_action('ppb_modify_fields', 'puzzle_modify_puzzle_fields');
 
-/* Section modifications */
+/*
+ * Section modifications
+ *
+ * Default sections that come bundled with the Puzzle Page Builder plugin:
+ * - accordions
+ * - call-to-action
+ * - carousel
+ * - features
+ * - one-column
+ * - team-members
+ * - three-column
+ * - two-column
+ */
 function puzzle_modify_puzzle_sections($puzzle_sections, $f) {
-    /*
-     * Remove or keep sections by their slugs
-     *
-     * Default sections that come bundled with the Puzzle Page Builder plugin:
-     * - accordions
-     * - call-to-action
-     * - carousel
-     * - features
-     * - one-column
-     * - team-members
-     * - three-column
-     * - two-column
-     */
+    /* Remove or keep sections by their slugs */
     // $puzzle_sections->remove_section('accordions');
     // $puzzle_sections->remove_sections(array('accordions', 'carousel'));
     // $puzzle_sections->keep_sections(array('one-column', 'two-column'));

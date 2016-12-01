@@ -1,7 +1,7 @@
 <nav class="main-nav">
-    <div class="pz-row">
+    <div class="row">
         <?php if (has_custom_logo()) : ?>
-        <div class="column xs-8 sm-6 md-4 lg-3">
+        <div class="col xs-8 sm-6 md-4 lg-3">
             <a href="<?php echo get_site_url(); ?>">
                 <?php the_custom_logo(); ?>
             </a>
@@ -9,7 +9,7 @@
         <?php endif; ?>
         
         <?php if (has_nav_menu('primary')) : ?>
-        <div class="column <?php echo (has_custom_logo() ? 'xs-4 sm-6 md-8 lg-9' : 'xs-12'); ?>">
+        <div class="col <?php echo (has_custom_logo() ? 'xs-4 sm-6 md-8 lg-9' : 'xs-12'); ?>">
             <?php
             $args = array(
                 'theme_location'  => 'primary',

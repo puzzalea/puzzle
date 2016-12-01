@@ -23,13 +23,9 @@ body {
 main {
     display: block;
     
-    > section {
-        &:first-child {
+    > section, > .pz-section {
+        &:first-child, &.pz-normal-padding-top:first-child {
             padding-top: $nav-height + $space-unit;
-        
-            &.pz-carousel {
-                padding-top: 0;
-            }
         }
         
         &.pz-no-padding-top:first-child {
@@ -39,6 +35,10 @@ main {
         &.pz-large-padding-top:first-child {
             padding-top: $nav-height + ($space-unit * 2);
         }
+    }
+    
+    > .pz-section.pz-carousel:first-child {
+        padding-top: 0;
     }
     
     ul, ol {

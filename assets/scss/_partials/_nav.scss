@@ -10,7 +10,7 @@
     background-color: $medium-gray;
     background-color: rgba($medium-gray, 0.9);
     
-    .pz-row {
+    .row {
         @include align-items(center);
         height: $nav-height;
         padding: 5px 15px;

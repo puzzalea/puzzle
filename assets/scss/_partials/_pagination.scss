@@ -29,6 +29,10 @@
         border-color: transparent;
     }
     
+    &.disabled {
+        cursor: not-allowed;
+    }
+    
     @include breakpoint($size-md) {
         padding-right: 1rem;
         padding-left: 1rem;
