@@ -11,9 +11,6 @@
 
 $theme_colors = puzzle_theme_colors();
 
-$puzzle_colors = new PuzzleColors;
-$puzzle_default_colors = $puzzle_colors->colors();
-
 $primary_color = $theme_colors['primary_color'];
 $secondary_color = $theme_colors['secondary_color'];
 $headline_dark = $theme_colors['headline_dark'];
@@ -99,7 +96,8 @@ if ($nav_background_color == 'secondary') {
     background-color: <?php echo $secondary_color; ?>;
 }
 
-#dl-menu.dl-menuwrapper li a {
+#dl-menu.dl-menuwrapper li a,
+.desktop-nav-menu ul ul li a {
     color: <?php echo $text_light; ?>;
 }
 
