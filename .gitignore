@@ -1,2 +1,3 @@
-.sass-cache/
+.*
+!.gitignore
 assets/css/custom.css
