@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section>
     <div class="row">
-        <div class="col xs-12">x
+        <div class="col xs-12">
             <div class="col-inner">
                 <h1><?php _e('404', 'puzzle'); ?></h1>
                 <h2><?php _e('Page not found!', 'puzzle'); ?></h2>

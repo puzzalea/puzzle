@@ -3,9 +3,15 @@
     <div class="row">
         <div class="col xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
             <div class="col-inner">
-                <h2><?php echo pluralize($wp_query->found_posts, 'search result'); ?> for: &quot;<?php echo get_search_query(); ?>&quot;</h2>
-                <?php
-                if (have_posts()) :
+                <?php if (have_posts()) : ?>
+                    <h1><?php printf(__('Search: %s', 'puzzle'), get_search_query()); ?></h1>
+                    <h4><?php
+                        echo pluralize(
+                            $wp_query->found_posts,
+                            _x('result', 'noun', 'puzzle'),
+                            _x('results', 'plural noun', 'puzzle')
+                        ); ?></h4>
+                    <?php
                     while (have_posts()) {
                         the_post();
                         get_template_part('theme/partials/loop');
@@ -14,7 +20,8 @@
                     get_template_part('theme/partials/pagination');
                     ?>
                 <?php else : ?>
-                    <p>Sorry, no posts found for &quot;<?php echo get_search_query(); ?>&quot;.</p>
+                    <h1><?php _e('No results', 'puzzle'); ?></h1>
+                    <p><?php printf(_x('Sorry, no posts found for %s.', 'search query', 'puzzle'), '&ldquo;' . get_search_query() . '&rdquo;'); ?></p>
                 <?php endif; ?>
             </div>
         </div>

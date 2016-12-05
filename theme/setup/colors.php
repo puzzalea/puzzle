@@ -9,32 +9,32 @@ function puzzle_default_colors() {
     return array(
         array(
             'id'        => 'primary_color',
-            'label'     => 'Primary Color',
+            'label'     => __('Primary Color', 'puzzle'),
             'default'   => '#314887'
         ),
         array(
             'id'        => 'secondary_color',
-            'label'     => 'Secondary Color',
+            'label'     => __('Secondary Color', 'puzzle'),
             'default'   => '#4b97e3'
         ),
         array(
             'id'        => 'headline_dark',
-            'label'     => 'Dark Headlines',
+            'label'     => __('Dark Headlines', 'puzzle'),
             'default'   => '#333'
         ),
         array(
             'id'        => 'text_dark',
-            'label'     => 'Dark Body Text',
+            'label'     => __('Dark Body Text', 'puzzle'),
             'default'   => '#555'
         ),
         array(
             'id'        => 'headline_light',
-            'label'     => 'Light Headlines',
+            'label'     => __('Light Headlines', 'puzzle'),
             'default'   => '#fff'
         ),
         array(
             'id'        => 'text_light',
-            'label'     => 'Light Body Text',
+            'label'     => __('Light Body Text', 'puzzle'),
             'default'   => '#fff'
         )
     );

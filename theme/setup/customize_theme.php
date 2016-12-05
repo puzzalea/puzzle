@@ -11,7 +11,7 @@ function puzzle_customize_register($wp_customize) {
     $colors = puzzle_default_colors();
     
     $wp_customize->add_section('puzzle_colors' , array(
-        'title'      => 'Colors',
+        'title'      => _x('Colors', 'plural noun', 'puzzle'),
         'priority'   => 200
     ));
     
@@ -31,15 +31,15 @@ function puzzle_customize_register($wp_customize) {
     
     /* For nav and footer */
     $background_color_options = array(
-        'primary'       => 'Primary Color',
-        'secondary'     => 'Secondary Color',
-        'white'         => 'White',
-        'gray'          => 'Gray'
+        'primary'       => __('Primary Color', 'puzzle'),
+        'secondary'     => __('Secondary Color', 'puzzle'),
+        'white'         => __('White', 'puzzle'),
+        'gray'          => __('Gray', 'puzzle')
     );
     
     /* Navigation Bar */
     $wp_customize->add_section('puzzle_nav', array(
-        'title'      => 'Navigation Bar',
+        'title'      => __('Navigation Bar', 'puzzle'),
         'priority'   => 200
     ));
     
@@ -50,7 +50,7 @@ function puzzle_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_control('nav_background_color', array(
-        'label'             => 'Background Color',
+        'label'             => __('Background Color', 'puzzle'),
         'section'           => 'puzzle_nav',
         'settings'          => 'nav_background_color',
         'type'              => 'select',
@@ -70,7 +70,7 @@ function puzzle_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_control('footer_background_color', array(
-        'label'             => 'Background Color',
+        'label'             => __('Background Color', 'puzzle'),
         'section'           => 'puzzle_footer',
         'settings'          => 'footer_background_color',
         'type'              => 'select',
@@ -84,30 +84,10 @@ function puzzle_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_control('footer_content', array(
-        'label'             => 'Content',
+        'label'             => __('Content', 'puzzle'),
         'section'           => 'puzzle_footer',
         'settings'          => 'footer_content',
         'type'              => 'textarea'
-    ));
-    
-    /* Miscellaneous */
-    $wp_customize->add_section('puzzle_miscellaneous', array(
-        'title'      => 'Miscellaneous',
-        'priority'   => 220,
-    ));
-    
-    $wp_customize->add_setting('disable_smooth_scroll', array(
-        'default'           => '',
-        'sanitize_callback' => 'esc_attr',
-        'transport'         => 'refresh'
-    ));
-    
-    $wp_customize->add_control('disable_smooth_scroll', array(
-        'label'             => 'Disable smooth scrolling',
-        'description'       => 'Checking this box will turn off the scrolling animation when a user clicks on a link that takes them to another part of the page.',
-        'section'           => 'puzzle_miscellaneous',
-        'settings'          => 'disable_smooth_scroll',
-        'type'              => 'checkbox'
     ));
 }
 add_action('customize_register', 'puzzle_customize_register');

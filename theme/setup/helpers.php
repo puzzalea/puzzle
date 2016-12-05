@@ -35,14 +35,12 @@ function hex2rgb($hex) {
  *
  * $num - integer, the number to base the pluralization on
  * $word - string, the word to pluralize
- * $plural - string, the pluralized form of the word. If blank, an 's' is
- *      added to the end of $word
+ * $plural - string, the pluralized form of the word
  *
  * Returns a string with the number and correctly pluralized word
  * e.g. '5 cats', '1 dog'
  */
-function pluralize($num, $word, $plural = null) {
-    if (!$plural) $plural = $word . 's';
+function pluralize($num, $word, $plural) {
     return $num . ' ' . ($num == 1 ? $word : $plural);
 }
 

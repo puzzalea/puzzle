@@ -194,26 +194,16 @@ jQuery('document').ready(function($) {
                 
             e.preventDefault();
             
-            var navHeight = 0,
+            var navHeight = $nav.outerHeight(),
                 adminBarHeight = 0;
-            
-            if ($nav.css('bottom') !== '0px') {
-                navHeight = $nav.outerHeight();
-            }
             
             if ($adminBar.length > 0 && $adminBar.css('position') === 'fixed') {
                 adminBarHeight = $adminBar.height();
             }
             
-            var animateTime = 0;
-            
-            if ($body.hasClass('smooth-scroll-enabled')) {
-                animateTime = 1500;
-            }
-            
             $('html, body').animate({
                scrollTop: $(section).offset().top - navHeight - adminBarHeight
-            }, animateTime);
+            }, 1500);
         }
     });
     

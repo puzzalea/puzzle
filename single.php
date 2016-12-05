@@ -12,7 +12,7 @@ the_post();
                     <?php
                     $categories = get_the_category();
                     if (get_the_category()) : ?>
-                        <h5>Categories:</h5>
+                        <h5><?php _e('Categories:', 'puzzle'); ?></h5>
                         <h5><?php the_category(', '); ?></h5>
                     <?php endif; ?>
             
