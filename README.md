@@ -1,6 +1,6 @@
 # Puzzle
 
-This is my personal starter theme called Puzzle. It is meant to be used with my plugin [Puzzle Page Builder](https://github.com/caraheacock/puzzle-page-builder) but can be used on its own.
+This is a starter WordPress theme called Puzzle. It is meant to be used with [Puzzle Page Builder](https://github.com/caraheacock/puzzle-page-builder) but can be used on its own.
 
 One of these days I will make an even blanker starter theme that does not have so much stuff that only I use for my personal projects, but that time is not now.
 
