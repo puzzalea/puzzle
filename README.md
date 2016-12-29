@@ -1,8 +1,8 @@
 # Puzzle
 
-This is a starter WordPress theme called Puzzle. It is meant to be used with [Puzzle Page Builder](https://github.com/caraheacock/puzzle-page-builder) but can be used on its own.
+This is a starter WordPress theme called Puzzle. It is meant to be used with [Puzzle Page Builder](https://github.com/puzzalea/puzzle-page-builder) but can be used on its own.
 
-One of these days I will make an even blanker starter theme that does not have so much stuff that only I use for my personal projects, but that time is not now.
+One of these days I will make an even blanker starter theme, but that time is not now.
 
 ## Set up
 
@@ -11,7 +11,7 @@ One of these days I will make an even blanker starter theme that does not have s
 1. Customize the details in `style.css`.
 1. Customize the text domain throughout translation functions in the theme.
 1. Customize the function prefixes throughout the functionality (mostly files in `theme/setup`).
-1. Optional: install the [Puzzle Page Builder](https://github.com/caraheacock/puzzle-page-builder) plugin.
+1. Optional: install the [Puzzle Page Builder](https://github.com/puzzalea/puzzle-page-builder) plugin.
 1. Towards the end of the coding/design process, create a screenshot of the theme, name it `screenshot.png`, and place it in the root directory of the theme. [The recommended screenshot size is 1200x900 pixels](https://codex.wordpress.org/Theme_Development#Screenshot), although any 4:3 image size is technically acceptable.
 
 ## Customizing
