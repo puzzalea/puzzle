@@ -39,6 +39,10 @@ main {
     
     > .pz-section.pz-carousel:first-child {
         padding-top: 0;
+        
+        .pz-carousel-slide {
+            padding-top: $nav-height;
+        }
     }
     
     ul, ol {

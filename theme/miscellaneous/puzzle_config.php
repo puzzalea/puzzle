@@ -8,13 +8,6 @@
 /* General settings */
 function puzzle_modify_settings($settings) {
     /*
-     * Set if button formats are available in the formats dropdown in the
-     * WYSIWYG editor.
-     * Default is true, button formats are available.
-     */
-    $settings->set_button_formats(true);
-    
-    /*
      * Choose which post types the page builder is available for.
      * Takes an array of post types.
      * Default is array('page'), the page builder is only available for pages.
@@ -64,6 +57,13 @@ function puzzle_modify_settings($settings) {
     $settings->set_icon_library(true);
     
     /*
+     * Set if button formats are available in the formats dropdown in the
+     * WYSIWYG editor.
+     * Default is true, button formats are available.
+     */
+    $settings->set_button_formats(true);
+    
+    /*
      * Set section and column spacing
      */
     $settings->set_spacing(array(
@@ -79,13 +79,13 @@ add_action('ppb_modify_settings', 'puzzle_modify_settings');
  * Color modifications
  *
  * Default colors that come bundled with the Puzzle Page Builder plugin:
- * - Primary Color - id: primary, color: #3b54a5, text color scheme: light
- * - Secondary Color - id: secondary, color: #2cb799, text color scheme: light
- * - White - id: white, color: #fff, text color scheme: dark
- * - Light Gray - id: light-gray, color: #eee, text color scheme: dark
- * - Medium Gray - id: medium-gray, color: #aaa, text color scheme: light
- * - Dark Gray - id: dark-gray, color: #444, text color scheme: light
- * - Black - id: black, color: #000, text color scheme: light
+ * - Primary Color - id: primary, color: #3b54a5, text color scheme: light, order: 0
+ * - Secondary Color - id: secondary, color: #2cb799, text color scheme: light, order: 10
+ * - White - id: white, color: #fff, text color scheme: dark, order: 20
+ * - Light Gray - id: light-gray, color: #eee, text color scheme: dark, order: 30
+ * - Medium Gray - id: medium-gray, color: #aaa, text color scheme: light, order: 40
+ * - Dark Gray - id: dark-gray, color: #444, text color scheme: light, order: 50
+ * - Black - id: black, color: #000, text color scheme: light, order: 60
  */
 function puzzle_modify_puzzle_colors($colors) {
     /* Edit existing theme colors */
@@ -93,13 +93,17 @@ function puzzle_modify_puzzle_colors($colors) {
     //     ->set_name('Pink')
     //     ->set_text_color_scheme('dark');
     
+    /* Remove existing theme colors */
+    // $colors->remove_theme_color('dark-gray');
+    
     /* Add new colors */
-    // $accent = new PuzzleColor;
-    // $accent->set_name('Accent Color')
-    //     ->set_id('accent')
-    //     ->set_color('#f00')
-    //     ->set_text_color_scheme('light');
-    //
+    // $accent = new PuzzleColor(array(
+    //     'name'              => __('Accent Color'),
+    //     'id'                => 'accent',
+    //     'color'             => '#f00',
+    //     'text_color_scheme' => 'light',
+    //     'order'             => 11
+    // ));
     // $colors->add_theme_color($accent);
     
     /* Edit text colors */
@@ -152,7 +156,7 @@ add_action('ppb_modify_icon_libraries', 'puzzle_modify_puzzle_icon_libraries');
 function puzzle_modify_puzzle_fields($f) {
     /* Add field modifications here */
     // $f->field('background_color', false)
-    //     ->remove_option('gray');
+    //     ->remove_option('black');
     
     /* Add new fields */
     // foreach (glob(get_stylesheet_directory() . '/theme/fields/*.php') as $filename) {

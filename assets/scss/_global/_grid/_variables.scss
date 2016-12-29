@@ -8,13 +8,13 @@ $pz-grid-prefix: '';
 // Sizes for grid system and media queries
 $pz-grid-sizes: (
     xs: 0,
-    sm: 480px,
-    md: 660px,
-    lg: 850px,
-    xl: 1024px
+    sm: $size-sm,
+    md: $size-md,
+    lg: $size-lg,
+    xl: $size-xl
 );
 
-$pz-grid-max-width: 1200px;
+$pz-grid-max-width: $max-width;
 
 $pz-grid-col-num: 12;
 $pz-grid-miscellaneous-widths: (
