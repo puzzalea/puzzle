@@ -1,9 +1,28 @@
 <?php
 
 /*
- * Puzzle Pieces
+ * Puzzle
  * Helper functions
  */
+
+/*
+ * Displays a template part and allows variables to be passed into it.
+ * Works similarly to WordPress's built-in get_template_part() function.
+ *
+ * $slug - string, name of the template part
+ * $vars - an array of variables to make available in the template part. Keys
+ *   must contain characters that are valid for PHP variables.
+ *   Wrong: 'my-variable!'
+ *   Right: 'my_variable'
+ */
+function get_template_part_pass_vars($slug, $vars = array()) {
+    // Converts the $vars into actual variables and makes them available in
+    // the scope of the template part
+    extract($vars);
+    
+    // Display the template part
+    include(locate_template($slug . '.php'));
+}
 
 /*
  * Converts a hex value to rgb

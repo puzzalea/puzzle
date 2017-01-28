@@ -15,9 +15,7 @@ if (!isset($content_width)) $content_width = 1200;
 
 /* Add script for comments */
 function puzzle_enqueue_comments_reply() {
-    if (get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
+    if (get_option('thread_comments')) wp_enqueue_script('comment-reply');
 }
 add_action('comment_form_before', 'puzzle_enqueue_comments_reply');
 
