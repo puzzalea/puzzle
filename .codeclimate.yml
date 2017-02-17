@@ -1,0 +1,51 @@
+engines:
+  csslint:
+    enabled: true
+    checks:
+      box-sizing:
+        enabled: false
+      compatible-vendor-prefixes:
+        enabled: false
+      unique-headings:
+        enabled: false
+      universal-selector:
+        enabled: false
+  scss-lint:
+    enabled: true
+    exclude_paths:
+      - "**.css"
+    checks:
+      Comment:
+        enabled: false
+      Indentation:
+        enabled: false
+      SingleLinePerSelector:
+        enabled: false
+      VendorPrefix:
+        enabled: false
+  phpmd:
+    enabled: true
+    checks:
+      CleanCode/ElseExpression:
+        enabled: false
+      Controversial/CamelCaseMethodName:
+        enabled: false
+      Controversial/CamelCaseParameterName:
+        enabled: false
+      Controversial/CamelCasePropertyName:
+        enabled: false
+      Controversial/CamelCaseVariableName:
+        enabled: false
+      Design/ExitExpression:
+        enabled: false
+      Naming/LongVariable:
+        enabled: false
+      Naming/ShortMethodName:
+        enabled: false
+      Naming/ShortVariable:
+        enabled: false
+exclude_paths:
+  - assets/js/lib/**/*
+ratings:
+  paths:
+    - "**/*"
