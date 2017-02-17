@@ -4,10 +4,10 @@ jQuery('document').ready(function($) {
         $body = $('body'),
         $adminBar = $('#wpadminbar'),
         $header = $('.mainHeader'),
-        $nav = $('.mainNav'),
+        $nav = $('.main-nav'),
         $mobileMenu = $('#dl-menu'),
         $main = $('main'),
-        $footer = $('.mainFooter');
+        $footer = $('.main-footer');
         
     // Check for valid jQuery selector
     function isValidSelector(selector) {
@@ -117,7 +117,7 @@ jQuery('document').ready(function($) {
     }
     
     // Submenu appearance
-    var $navSubMenuParent = $('.js-mainNav__desktopMenu .menu-item-has-children');
+    var $navSubMenuParent = $('.js-main-nav__desktop-menu .menu-item-has-children');
     
     var adjustSubMenuPosition = function(navSubMenuParent) {
         var windowWidth = $window.width(),

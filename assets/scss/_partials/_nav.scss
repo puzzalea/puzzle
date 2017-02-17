@@ -2,7 +2,7 @@
 /* Navigation Bar */
 /*----------------*/
 
-.mainNav {
+.main-nav {
     @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
     position: fixed;
     z-index: 2;
@@ -47,13 +47,13 @@
 }
 
 @include breakpoint(601px) {
-    body.admin-bar .mainNav {
+    body.admin-bar .main-nav {
         top: 46px;
     }
 }
 
 @include breakpoint(783px) {
-    body.admin-bar .mainNav {
+    body.admin-bar .main-nav {
         top: 32px;
     }
 }
@@ -100,7 +100,7 @@
 }
 
 /* Desktop menu */
-.mainNav__desktopMenu {
+.main-nav__desktop-menu {
     display: none;
     
     ul {
@@ -182,11 +182,11 @@
 }
 
 @include breakpoint($size-md) {
-    .mainNav__mobileMenu {
+    .main-nav__mobile-menu {
         display: none;
     }
     
-    .mainNav__desktopMenu {
+    .main-nav__desktop-menu {
         display: block;
     }
 }

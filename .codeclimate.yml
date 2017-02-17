@@ -19,6 +19,8 @@ engines:
         enabled: false
       Indentation:
         enabled: false
+      LeadingZero:
+        enabled: false
       SingleLinePerSelector:
         enabled: false
       VendorPrefix:
@@ -46,6 +48,7 @@ engines:
         enabled: false
 exclude_paths:
   - assets/js/lib/**/*
+  - assets/scss/_lib/**/*
 ratings:
   paths:
     - "**/*"

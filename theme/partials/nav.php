@@ -1,4 +1,4 @@
-<nav class="mainNav">
+<nav class="main-nav">
     <div class="row">
         <?php if (has_custom_logo()) : ?>
         <div class="col">
@@ -13,15 +13,15 @@
             <?php
             $args = array(
                 'theme_location'  => 'primary',
-                'container_id'    => 'mainNav__desktopMenu',
-                'container_class' => 'mainNav__desktopMenu js-mainNav__desktopMenu'
+                'container_id'    => 'main-nav__desktop-menu',
+                'container_class' => 'main-nav__desktop-menu js-main-nav__desktop-menu'
             );
             wp_nav_menu($args);
         
             $args = array(
                 'theme_location'  => 'primary',
                 'container_id'    => 'dl-menu',
-                'container_class' => 'dl-menuwrapper mainNav__mobileMenu',
+                'container_class' => 'dl-menuwrapper main-nav__mobile-menu',
                 'items_wrap'      => '<button class="dl-trigger">Open Menu</button><ul class="dl-menu">%3$s</ul>'
             );
             wp_nav_menu($args);
