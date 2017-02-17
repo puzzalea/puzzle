@@ -1,4 +1,4 @@
-<div id="post-<?php the_ID(); ?>" <?php post_class('puzzle-loop'); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class('loop'); ?>>
     <h2><a href="<?php echo get_the_permalink(get_the_ID()); ?>"><?php the_title(); ?></a></h2>
 
     <?php if (get_post_type($post) == 'post') : ?>

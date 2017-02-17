@@ -1,5 +1,9 @@
 # Puzzle
 
+v1.3.1
+
+[![Code Climate](https://codeclimate.com/github/puzzalea/puzzle/badges/gpa.svg)](https://codeclimate.com/github/puzzalea/puzzle)
+
 This is a starter WordPress theme called Puzzle. It is meant to be used with [Puzzle Page Builder](https://github.com/puzzalea/puzzle-page-builder) but can be used on its own.
 
 One of these days I will make an even blanker starter theme, but that time is not now.

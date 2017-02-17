@@ -5,8 +5,8 @@ the_post();
 <section>
     <div class="row">
         <div class="col xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
-            <div class="col-inner">
-                <div class="single-post-meta">
+            <div class="col-inner singlePost">
+                <div class="singlePost__meta">
                     <?php the_title('<h2>', '</h2>'); ?>
                     <h4><?php the_time(get_option('date_format')); ?>, by <?php the_author(); ?></h4>
                     <?php
@@ -17,16 +17,16 @@ the_post();
                     <?php endif; ?>
             
                     <?php if (has_tag()) : ?>
-                    <h6><?php the_tags(); ?></h6>
+                        <h6><?php the_tags(); ?></h6>
                     <?php endif; ?>
                 </div>
             
-                <div class="single-post-content<?php if (comments_open()) echo ' comments-open'; ?>">
+                <div class="singlePost__content<?php if (comments_open()) echo ' singlePost__commentsOpen'; ?>">
                     <?php
                     the_content();
                     
                     $args = array(
-                        'before'            => '<p class="single-post-page-links">' . __('Pages:', 'puzzle'),
+                        'before'            => '<p class="singlePost__pageLinks">' . __('Pages:', 'puzzle'),
                         'after'             => '</p>',
                         'link_before'       => '<span>',
                         'link_after'        => '</span>'

@@ -13,8 +13,7 @@
                     }
                     
                     get_template_part('theme/partials/pagination');
-                    ?>
-                <?php else : ?>
+                else : ?>
                     <h1><?php _e('No results', 'puzzle'); ?></h1>
                     <p><?php
                         if (isset($no_results_msg)) {

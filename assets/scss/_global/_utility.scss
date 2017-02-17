@@ -39,3 +39,17 @@
     max-width: $max-width;
     margin: 0 auto;
 }
+
+// Hide text for screen readers
+%screen-reader-text {
+    position: absolute;
+    top: auto;
+    left: -100000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text {
+    @extend %screen-reader-text;
+}

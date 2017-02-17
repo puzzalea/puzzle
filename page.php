@@ -6,7 +6,7 @@ the_post();
     <div class="row pz-section-headline">
         <div class="col xs-12">
             <div class="col-inner">
-                <?php the_title('<h2>', '</h2>'); ?>
+                <?php the_title('<h1>', '</h1>'); ?>
             </div>
         </div>
     </div>

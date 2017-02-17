@@ -2,37 +2,39 @@
 /* Single Post Page */
 /*------------------*/
 
-.single-post-meta {
-    h4, h5, h6 {
-        margin: ($text-space-unit / 2) 0;
+.singlePost {
+    &__meta {
+        h4, h5, h6 {
+            margin: ($text-space-unit / 2) 0;
+        }
     }
-}
 
-.single-post-content {
-    margin: $space-unit 0;
-    padding: $space-unit 0;
-    border-top: solid 1px $medium-gray;
+    &__content {
+        margin: $space-unit 0;
+        padding: $space-unit 0;
+        border-top: solid 1px $medium-gray;
     
-    &.comments-open {
-        border-bottom: solid 1px $medium-gray;
+        &--commentsOpen {
+            border-bottom: solid 1px $medium-gray;
+        }
     }
-}
 
-.single-post-page-links {
-    font-weight: $bold;
+    &__pageLinks {
+        font-weight: $bold;
     
-    span {
-        display: inline-block;
-        padding: 0 1rem;
-        background-color: $medium-gray;
-    }
-    
-    a {
-        display: inline-block;
-        background-color: $light-gray;
-        
         span {
-            background-color: transparent;
+            display: inline-block;
+            padding: 0 1rem;
+            background-color: $medium-gray;
+        }
+    
+        a {
+            display: inline-block;
+            background-color: $light-gray;
+        
+            span {
+                background-color: transparent;
+            }
         }
     }
 }

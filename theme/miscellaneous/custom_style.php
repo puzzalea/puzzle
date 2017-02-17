@@ -71,12 +71,12 @@ if ($nav_background_color == 'secondary') {
 }
 ?>
 
-.main-nav {
+.mainNav {
     background-color: <?php echo $nav_primary_color; ?>;
     background-color: rgba(<?php echo hex2rgb($nav_primary_color); ?>, 0.9);
 }
 
-.main-nav a {
+.mainNav a {
     color: <?php echo $nav_text_color; ?>;
 }
 
@@ -87,7 +87,7 @@ if ($nav_background_color == 'secondary') {
 #dl-menu.dl-menuwrapper ul,
 #dl-menu.dl-menuwrapper button.dl-active,
 #dl-menu.dl-menuwrapper button:hover,
-.desktop-nav-menu ul ul {
+.mainNav__desktopMenu ul ul {
     background: <?php echo $nav_secondary_color; ?>;
 }
 <?php if ($nav_primary_color == '#fff' || $nav_primary_color == '#eee') : ?>
@@ -97,7 +97,7 @@ if ($nav_background_color == 'secondary') {
 }
 
 #dl-menu.dl-menuwrapper li a,
-.desktop-nav-menu ul ul li a {
+.mainNav__desktopMenu ul ul li a {
     color: <?php echo $text_light; ?>;
 }
 
@@ -134,15 +134,15 @@ if ($footer_background_color == 'secondary') {
 }
 ?>
 
-.main-footer {
+.mainFooter {
     background-color: <?php echo $footer_primary_color; ?>
 }
 
-.main-footer h1, .main-footer h2, .main-footer h3, .main-footer h4, .main-footer h5, .main-footer h6 {
+.mainFooter h1, .mainFooter h2, .mainFooter h3, .mainFooter h4, .mainFooter h5, .mainFooter h6 {
     color: <?php echo $footer_headline_color; ?>;
 }
 
-.main-footer, .main-footer p, .main-footer li, .main-footer th, .main-footer td, .main-footer a {
+.mainFooter, .mainFooter p, .mainFooter li, .mainFooter th, .mainFooter td, .mainFooter a {
     color: <?php echo $footer_text_color; ?>
 }
 

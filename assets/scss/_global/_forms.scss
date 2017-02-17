@@ -2,10 +2,6 @@
 /* Forms */
 /*-------*/
 
-form {
-    @extend %clearfix;
-}
-
 label {
     display: block;
     font-weight: $bold;
@@ -62,10 +58,6 @@ input {
     &[type='radio'] {
         -webkit-appearance: radio;
     }
-    
-    &[type='submit'] {
-        float: right;
-    }
 }
 
 select {
@@ -82,4 +74,19 @@ select {
 
 textarea {
     max-width: 100%;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+    color: $medium-gray;
+}
+
+::-moz-placeholder {
+    font-style: italic;
+    color: $medium-gray;
+}
+
+:-ms-input-placeholder {
+    font-style: italic;
+    color: $medium-gray; 
 }
