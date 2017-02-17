@@ -44,7 +44,7 @@
 	background: #aaa;
 }
 
-.dl-menuwrapper button:after {
+.dl-menuwrapper button::after {
 	content: '';
 	position: absolute;
 	width: 68%;
@@ -88,8 +88,8 @@
 	background: rgba(0,0,0,0.1);
 }
 
-.dl-menuwrapper li.dl-back:after,
-.dl-menuwrapper li > a:not(:only-child):after {
+.dl-menuwrapper li.dl-back::after,
+.dl-menuwrapper li > a:not(:only-child)::after {
 	position: absolute;
 	top: 0;
 	line-height: 50px;
@@ -99,14 +99,14 @@
 	content: "\e000";
 }
 
-.dl-menuwrapper li.dl-back:after {
+.dl-menuwrapper li.dl-back::after {
 	left: 10px;
 	color: rgba(212,204,198,0.3);
 	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
 
-.dl-menuwrapper li > a:after {
+.dl-menuwrapper li > a::after {
 	right: 10px;
 	color: rgba(0,0,0,0.15);
 }
@@ -761,7 +761,7 @@ All this is done for any sub-level being entered.
 	background: rgba(0,0,0,0.1);
 }
 
-.no-js .dl-menuwrapper li > a:not(:only-child):after {
+.no-js .dl-menuwrapper li > a:not(:only-child)::after {
 	content: '';
 }
 

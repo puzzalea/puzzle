@@ -3,7 +3,7 @@
 /*----------------*/
 
 .main-nav {
-    @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
+    @include box-shadow(0 2px 2px 0 rgba(#000, 0.05));
     position: fixed;
     z-index: 2;
     width: 100%;
@@ -30,8 +30,8 @@
     }
     
     a {
-        text-decoration: none;
         color: #fff;
+        text-decoration: none;
         
         img {
             /* Fix blurriness when scaling/transitioning */
@@ -75,7 +75,7 @@
     }
     
     ul {
-        @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
+        @include box-shadow(0 2px 2px 0 rgba(#000, 0.05));
         top: 50px;
         left: auto;
         width: 250px;
@@ -91,7 +91,7 @@
         font-size: 1.2rem;
     }
     
-    li.dl-back:after, li > a:not(:only-child):after {
+    li.dl-back::after, li > a:not(:only-child)::after {
         font-family: 'FontAwesome';
         font-size: 18px;
         line-height: 40px;
@@ -137,7 +137,7 @@
             width: 250px;
             background-color: $medium-gray;
             text-align: left;
-            @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
+            @include box-shadow(0 2px 2px 0 rgba(#000, 0.05));
             opacity: 0;
             transition: visibility 0.4s ease, opacity 0.4s ease;
             
@@ -158,7 +158,7 @@
                 &.menu-item-has-children > a {
                     padding-right: 25px;
                     
-                    &:after {
+                    &::after {
                         position: absolute;
                         top: 9px;
                         right: 10px;

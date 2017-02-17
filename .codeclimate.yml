@@ -6,6 +6,8 @@ engines:
         enabled: false
       compatible-vendor-prefixes:
         enabled: false
+      fallback-colors:
+        enabled: false
       unique-headings:
         enabled: false
       universal-selector:
@@ -17,9 +19,13 @@ engines:
     checks:
       Comment:
         enabled: false
+      DeclarationOrder:
+        enabled: false
       Indentation:
         enabled: false
       LeadingZero:
+        enabled: false
+      PropertySortOrder:
         enabled: false
       SingleLinePerSelector:
         enabled: false

@@ -3,7 +3,7 @@ jQuery('document').ready(function($) {
         $window = $(window),
         $body = $('body'),
         $adminBar = $('#wpadminbar'),
-        $header = $('.mainHeader'),
+        $header = $('.main-header'),
         $nav = $('.main-nav'),
         $mobileMenu = $('#dl-menu'),
         $main = $('main'),
